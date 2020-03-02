@@ -1,0 +1,31 @@
+input[type=checkbox]:checked ~ .indicator {
+  opacity: 100;
+}
+
+.indicator {
+  opacity: 0;
+  display: inline;
+}
+
+/* Hide the browser's default checkbox */
+.checkbox-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+  float: left;
+  margin-top: 5px;
+}
+
+/* On mouse-over, add a grey background color */
+.checkbox-container:hover input ~ .indicator {
+  opacity: 70;
+  background-color: var(--highlight-color);
+}
+
+/* On mouse-over, add a grey background color */
+.checkbox-container:hover input ~ b {
+  opacity: 100;
+  background-color: var(--highlight-color);
+}

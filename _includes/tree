@@ -1,0 +1,49 @@
+{% if level %}
+{% assign level = level | plus:1 %}
+{% else %}
+{% assign level = 0 %}
+{% endif %}
+
+{% for item in tree %}
+  {% assign cur = item.id %}
+
+  {% if level == 0 %}
+  <style>#nested-li-last:after { content: "└"; padding-left:8px; opacity: 0.4; }</style>
+  <style>#nested-li:after { content: "|"; padding-left:8px; opacity: 0.4; }</style>
+  <li>
+  {% else %}
+  {% if forloop.last %}
+  <li id="nested-li-last">
+  {% else %}
+  <li id="nested-li">
+  {% endif %}
+  {% endif %}
+    {% if item.childs %}
+    <label class="checkbox-container">
+      <input type="checkbox" id="{{cur}}Selected">
+      [<b>+</b>]
+    </label>
+    {% else %}[-]
+    {% endif %}
+     - <a href="{{item.url}}">{{item.title}}</a>
+      {% if item.childs %}
+        <script>
+        $('#{{cur}}Selected').click(function() {
+          $("#showOn{{cur}}").toggle(this.checked);
+          if ({{level}} > 0) {
+            if(this.checked) {
+              $("#{{cur}}Selected").parent().parent().prop("id","nested-li-last");
+            } else {
+              $("#{{cur}}Selected").parent().parent().prop("id","nested-li");
+            }
+          }
+        });
+        </script>
+        <ul id="showOn{{cur}}" style="display: none;margin-top:0px;margin-bottom: 0px;">
+          {% assign tree = item.childs %}
+          {% include tree %}
+        </ul>
+      {% endif %}
+  </li>
+{% endfor %}
+{% assign level = level | minus:1 %}
