@@ -8,8 +8,8 @@
   {% assign cur = item.id %}
 
   {% if level == 0 %}
-  <style>#nested-li-last:after { content: "└"; padding-left:8px; opacity: 0.4; }</style>
-  <style>#nested-li:after { content: "|"; padding-left:8px; opacity: 0.4; }</style>
+  <style>#nested-li-last:after { content: "└"; padding-left:8px; opacity: 0.3; font-weight: lighter; }</style>
+  <style>#nested-li:after { content: "|"; padding-left:8px; opacity: 0.3; font-weight: lighter; }</style>
   <li>
   {% else %}
   {% if forloop.last %}
