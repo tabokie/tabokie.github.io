@@ -1,13 +1,23 @@
 @charset "utf-8";
 :root {
   --color: #ebdbb2;
-  --highlight-color: #ff2e88;
-  --camouflage-color: #503850;
-  --background-color: #282828;
-  --emphsis-color: #98971a;
-  --emphsis-link-color: #d79921;
-  --selection-color: #d3869b;
-  --font-family: Lucida Console, 'ChsFont';
+  --highlight-color: #eb6b56;
+  /*#ff4646 red*/
+  /*#f3bf1e yellow*
+  /*#ff2e88 pink*/
+  /*#cb1104 thick red*/
+  /*#eb6b56 pale red*/
+  --camouflage-color: #222426;
+  --background-color: #0a0f12;
+  /*#101518 #0a0f12 blue*/
+  /*#282828 gray*/
+  --emphsis-color: #758eb7;
+  /*#98971a dirt yellow*/
+  /*#758eb7 light blue*/
+  --emphsis-link-color: #6f5f90;
+  --selection-color: #6f5f90;
+  --font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
+    Bitstream Vera Sans Mono, 'ChsFont';
   --global-transition: all 0.5s ease-in-out;
   --hover-transition: all .15s cubic-bezier(.4, 0, 0, 1);
   --border-radius: 5px;
@@ -16,15 +26,12 @@
 @font-face {
   font-family: 'ChsFont';
   src:
+    local('DengXian'),
     local('Microsoft JhengHei'),
     local('Hiragino Sans GB'),
     local('PingFang'),
-    local('DengXian'),
     local('Microsoft Yahei'),
     local('Droid Sans Fallback');
-  font-stretch: semi-expanded;
-  font-style: italic;
-  font-weight: bold;
 }
 
 /* cyrillic-ext */
@@ -75,7 +82,6 @@
   src: local('Ubuntu Regular'), local('Ubuntu-Regular'), url(https://fonts.gstatic.com/s/ubuntu/v14/4iCs6KVjbNBYlgoKfw72.woff2) format('woff2');
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
-
 
 .wide-spacing {
   letter-spacing: 2.5px;

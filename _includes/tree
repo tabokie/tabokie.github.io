@@ -23,7 +23,7 @@
       <input type="checkbox" id="{{cur}}Selected">
       [<b>+</b>]
     </label>
-    {% else %}[-]
+    {% else %}[<b>-</b>]
     {% endif %}
      - <a href="{{item.url}}">{{item.title}}</a>
       {% if item.childs %}
