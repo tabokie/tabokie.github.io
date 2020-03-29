@@ -55,8 +55,10 @@
         <p>
           <style>#hide-li:after { content: ""; padding-left:8px;}</style>
           <ul id="showOnUnchecked">
-            {% assign dateSorted = page.catalog | sort: 'date' | reverse %}
+            {% assign dateSorted = site.posts | sort: 'date' | reverse %}
             {% for entry in dateSorted %}
+              {% assign cur = entry.date | split: ' ' %}
+              {% assign prefix = cur[0] %}
               {% assign cur = entry.date | split: '-' %}
               {% if year != cur[0] %}
               {% assign year = cur[0] %}
@@ -65,17 +67,19 @@
               {% endunless %}
               <li id="hide-li"><b>{{year}}</b></li>
               {% endif %}
-              <li>{{entry.date}} - <a href="{{entry.url}}">{{entry.title}}</a></li>
+              <li>{{prefix}} - <a href="{{entry.url}}">{{entry.title}}</a></li>
             {% endfor %}
           </ul>
           <ul id="showOnChecked" style="display: none;">
-            {% assign categoryGrouped = page.catalog | group_by: 'category' %}
+            {% assign categoryGrouped = site.posts | group_by: 'category' %}
             {% assign categorySorted = categoryGrouped | sort: 'name' %}
             {% for category in categorySorted %}
               <li id="hide-li"><b>{{category.name}}</b></li>
               {% assign titleSorted = category.items | sort: 'title' %}
               {% for entry in titleSorted %}
-                <li>{{entry.date}} - <a href="{{entry.url}}">{{entry.title}}</a></li>
+                {% assign cur = entry.date | split: ' ' %}
+                {% assign prefix = cur[0] %}
+                <li>{{prefix}} - <a href="{{entry.url}}">{{entry.title}}</a></li>
               {% endfor %}
               <br />
             {% endfor %}

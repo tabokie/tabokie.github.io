@@ -1,0 +1,5 @@
+collections:
+  topics:
+    output: true
+  subtopics:
+    output: true

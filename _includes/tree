@@ -5,7 +5,7 @@
 {% endif %}
 
 {% for item in tree %}
-  {% assign cur = item.id %}
+  {% assign cur = item.id | replace: '/', '-' %}
 
   {% if level == 0 %}
   <style>#nested-li-last:after { content: "└"; padding-left:8px; opacity: 0.3; font-weight: lighter; }</style>
@@ -40,7 +40,15 @@
         });
         </script>
         <ul id="showOn{{cur}}" style="display: none;margin-top:0px;margin-bottom: 0px;">
-          {% assign tree = item.childs %}
+          {% assign tree = "" | split: ',' %}
+          {% for child in item.childs %}
+            {% for p in site.subtopics %}
+              {% if p.id == child %}
+                {% assign index =  forloop.index | minus:1 %}
+              {% endif %}
+            {% endfor %}
+            {% assign tree = tree | push: site.subtopics[index] %}
+          {% endfor %}
           {% include tree %}
         </ul>
       {% endif %}
