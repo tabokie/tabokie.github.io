@@ -988,3 +988,7 @@ img {
   max-width: 100%;
   max-height: 70%;
 }
+
+.avatar {
+  width: 200px;
+}
