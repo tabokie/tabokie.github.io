@@ -44,12 +44,19 @@
       {% include navbar.html %}
 
       <div class="snowframe">
-        <h1>Blogposts</h1>
+        <h1>{{page.title}}</h1>
+        {{content}}
         <div>
-          <label class="checkbox-container checkbox-hightlight">
+          <!-- <label class="checkbox-container checkbox-hightlight">
             <input type="checkbox" id="sortSelected">
             [<span>by</span> <span class="n-indicator">time</span>/<span class="indicator">category</span>]
-          </label>
+          </label> -->
+          <!-- ✔ -->
+          <label class="checkbox-container">-
+              <input type="checkbox" id="sortSelected">
+              [<b class="indicator">*</b>]
+            </label>
+            tag sort
         </div>
 
         <p>
@@ -74,6 +81,9 @@
             {% assign categoryGrouped = site.posts | group_by: 'category' %}
             {% assign categorySorted = categoryGrouped | sort: 'name' %}
             {% for category in categorySorted %}
+              {% unless forloop.first %}
+              <br />
+              {% endunless %}
               <li id="hide-li"><b>{{category.name}}</b></li>
               {% assign titleSorted = category.items | sort: 'title' %}
               {% for entry in titleSorted %}
@@ -81,7 +91,6 @@
                 {% assign prefix = cur[0] %}
                 <li>{{prefix}} - <a href="{{entry.url}}">{{entry.title}}</a></li>
               {% endfor %}
-              <br />
             {% endfor %}
           </ul>
         </p>

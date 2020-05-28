@@ -1,5 +1,6 @@
 ---
 layout: catalog
-title: "Blogposts"
+title: Blogpost
 ---
+
 

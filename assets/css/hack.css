@@ -14,8 +14,9 @@
   --emphsis-color: #758eb7;
   /*#98971a dirt yellow*/
   /*#758eb7 light blue*/
-  --emphsis-link-color: #6f5f90;
-  --selection-color: #6f5f90;
+  --emphsis-link-color: #b0bec5;
+  /*6f5f90*/
+  --selection-color: #eb6b56;
   --font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
     Bitstream Vera Sans Mono, 'ChsFont';
   --global-transition: all 0.5s ease-in-out;
@@ -107,7 +108,7 @@ html {
   color:var(--emphsis-color);
 }
 .hack code,.hack strong {
-  color:var(--emphsis-color);
+  color:var(--emphsis-link-color);
 }
 .hack .progress-bar-filled {
   background-color:var(--emphsis-color);
@@ -991,4 +992,8 @@ img {
 
 .avatar {
   width: 200px;
+}
+
+.hidden-text {
+  color: var(--camouflage-color);
 }
