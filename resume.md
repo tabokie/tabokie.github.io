@@ -1,9 +1,10 @@
 ---
 layout: blog
-title: "Resume"
+title: Resume
+override_title: true
 ---
 
-# Xinye Tao
+# Xinye Tao (`陶新野`)
 
 ## Skills
 

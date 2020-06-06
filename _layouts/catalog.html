@@ -37,7 +37,7 @@
        padding: 1em;
      }
     </style>
-    
+    {% seo %}
   </head>
   <body class="snow hack">
     <div class="container">
@@ -74,7 +74,7 @@
               {% endunless %}
               <li id="hide-li"><b>{{year}}</b></li>
               {% endif %}
-              <li>{{prefix}} - <a href="{{entry.url}}">{{entry.title}}</a></li>
+              <li>{{prefix | slice: 5, 5}} - <a href="{{entry.url}}">{{entry.title}}</a></li>
             {% endfor %}
           </ul>
           <ul id="showOnChecked" style="display: none;">
@@ -85,7 +85,7 @@
               <br />
               {% endunless %}
               <li id="hide-li"><b>{{category.name}}</b></li>
-              {% assign titleSorted = category.items | sort: 'title' %}
+              {% assign titleSorted = category.items | sort: 'date' | reverse %}
               {% for entry in titleSorted %}
                 {% assign cur = entry.date | split: ' ' %}
                 {% assign prefix = cur[0] %}

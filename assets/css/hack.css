@@ -200,7 +200,7 @@ fieldset {
 pre {
   padding: 2rem;
   margin: 1.75rem 0;
-  background-color: #fff;
+  background-color: var(--background-color);
   border: 1px solid #ccc;
   overflow: auto;
 }

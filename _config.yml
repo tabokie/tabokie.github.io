@@ -3,3 +3,5 @@ collections:
     output: true
   subtopics:
     output: true
+plugins:
+  - jekyll-seo-tag

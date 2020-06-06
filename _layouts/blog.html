@@ -37,12 +37,21 @@
        padding: 1em;
      }
     </style>
+    {% seo %}
   </head>
   <body class="snow hack">
     <div class="container">
       {% include navbar.html %}
 
       <div class="snowframe">
+      {% unless page.override_title %}
+      <h1>{{page.title}}</h1>
+      {% endunless %}
+      {% if page.category %}
+      {% assign date = page.date | split: ' ' %}
+      {% assign prefix = date[0] %}
+      <span class="hidden-text"># {{page.category}}, {{ prefix }}</span>
+      {% endif %}
       {{content}}
       </div>
 
