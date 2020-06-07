@@ -8,9 +8,9 @@ I'm Xinye Tao, aka Tabokie <\*1>.
 
 I code for a living, specialized in System and Graphics, currently employed at [PingCAP](https://pingcap.com).
 
-I'm a lifetime learner. This site exists to accompany me through this long journey.
+I'm a lifetime learner. This site exists to accompany me through the journey ahead.
 
-I might use different languages for writing, please feel free to contact me for possible full-text translation.
+I use different languages for writing, please feel free to contact me for possible translation.
 
 
 <br />
@@ -18,7 +18,8 @@ I might use different languages for writing, please feel free to contact me for 
 <br />
 <br />
 <br />
-\<Comments\>
+<br />
+<br />
 
 \*1. pronounced as /təˈbōkē/.
 
