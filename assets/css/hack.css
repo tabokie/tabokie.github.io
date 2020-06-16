@@ -7,8 +7,8 @@
   /*#ff2e88 pink*/
   /*#cb1104 thick red*/
   /*#eb6b56 pale red*/
-  --camouflage-color: #222426;
-  --background-color: #0a0f12;
+  --camouflage-color: #323436;
+  --background-color: #101518;
   /*#101518 #0a0f12 blue*/
   /*#282828 gray*/
   --emphsis-color: #758eb7;
@@ -16,7 +16,8 @@
   /*#758eb7 light blue*/
   --emphsis-link-color: #b0bec5;
   /*6f5f90*/
-  --selection-color: #eb6b56;
+  /* cb1104 + 101518 / 2*/
+  --selection-color: #6D130E;
   --font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
     Bitstream Vera Sans Mono, 'ChsFont';
   --global-transition: all 0.5s ease-in-out;
