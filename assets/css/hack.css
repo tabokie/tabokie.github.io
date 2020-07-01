@@ -23,6 +23,8 @@
   --global-transition: all 0.5s ease-in-out;
   --hover-transition: all .15s cubic-bezier(.4, 0, 0, 1);
   --border-radius: 5px;
+  --content-width: 62rem;
+  --text-size: 1.05rem;
 }
 
 @font-face {
@@ -340,7 +342,7 @@ a:hover {
 .hack h5,
 .hack h6,
 .hack strong {
-  font-size: 1rem;
+  font-size: var(--text-size);
   font-style: normal;
   font-family: var(--font-family)
 }
@@ -503,7 +505,7 @@ p {
   margin: 0 0 1.75rem;
 }
 .container {
-  max-width: 70rem;
+  max-width: var(--content-width);
 }
 .container,
 .container-fluid {
