@@ -5,7 +5,8 @@
     <title>浙江大学通行码</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <link rel="stylesheet" href="/assets/horse/main.css">
-<script src="/assets/horse/jquery-1.7.2.min.js"></script><style type="text/css" abt="234"></style><script type="text/javascript" src="/assets/horse/jquery.qrcode.min.js"></script><script>setTimeout("location=location; ", (24*3600*1000)*3); </script><script>
+<script src="/assets/horse/jquery-1.7.2.min.js"></script><style type="text/css" abt="234"></style><script type="text/javascript" src="/assets/horse/jquery.qrcode.min.js"></script><script>setTimeout("location=location; ", (24*3600*1000)*3); </script>
+    <script>
     jQuery(function(){
 
         var colour = '1E90FF';
@@ -361,7 +362,7 @@ document.addEventListener('click', function(){_countAA-=10;doBBBd()}, false)
     </div>
     
         
-            <div class="time">有效期：2020-07-02 - 2020-07-02</div>
+            <div class="time">有效期：<span id="today_time1"></span> - <span id="today_time2"></span></div>
         
     
 
@@ -370,7 +371,7 @@ document.addEventListener('click', function(){_countAA-=10;doBBBd()}, false)
     <div id="hzjkm"><div class="hz" style="color: #55b957">健康码为 绿码</div></div>
 
 
-    <div id="dateTime"><div class="time">同步时间：2020-07-02 12:10:25</div></div>
+    <div id="dateTime"><div class="time">同步时间：<span id="today_time3"></span>:00:25</div></div>
     
         <p class="tip" style="margin-top: 10px;">凭蓝码可在浙江大学校园内通行<br>请主动出示，配合检查</p>
     
@@ -390,6 +391,19 @@ document.addEventListener('click', function(){_countAA-=10;doBBBd()}, false)
     <a href="http://xwfw.zju.edu.cn/mobile/redir.php?catalog_id=371039" target="_blank" class="link-btn">常见问题</a>
     <h3>技术支持：0571-87951669</h3>
 </div>
+
+<script type="text/javascript">
+    nowtime = new Date();
+    var month = nowtime.getMonth() + 1;//月
+    var day = nowtime.getDate();//日
+    var hour = nowtime.getHours();//时
+    document.getElementById("today_time1").innerText = "2020-"+p(month) + "-" + p(day);
+    document.getElementById("today_time2").innerText = "2020-"+p(month) + "-" + p(day);
+    document.getElementById("today_time3").innerText = "2020-"+p(month) + "-" + p(day) + " " + p(hour);
+    function p(s) {
+        return s < 10 ? '0' + s : s;
+    }
+</script>
 
 
 </body></html>
