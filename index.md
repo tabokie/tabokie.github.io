@@ -6,7 +6,7 @@ avatar: /assets/img/vampire.png
 
 I'm Xinye Tao, aka Tabokie <\*1>.
 
-I code for a living, specialized in System and Graphics, currently employed at [PingCAP](https://pingcap.com).
+I code for a living, specialized in System and Graphics, currently employed at [PingCAP](https://en.pingcap.com).
 
 I'm a lifetime learner. This site exists to accompany me through the journey ahead.
 

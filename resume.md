@@ -39,9 +39,11 @@ override_title: true
   - Fugue: distributed database with decoupled services
   - make it scalable and replicated
 
+**PingCAP – TP-Perf** (Database Engineer; Jul, 2020 ~ now)
+
 ## Publications
 
-**OSDI 2020** (Pending) - Simplifying replication for distributed, transactional databases [Liang Jeff Chen, Xinye Tao, Bin Yan, Qianxi Zhang, Lintao Zhang]
+(Pending) Simplifying replication for distributed, transactional databases [Liang Jeff Chen, Xinye Tao, Bin Yan, Qianxi Zhang, Lintao Zhang]
 
 ## Education
 
