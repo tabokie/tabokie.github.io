@@ -4,7 +4,7 @@ title: Tabokie's Page
 avatar: /assets/img/vampire.png
 ---
 
-I'm Xinye Tao, aka Tabokie <\*1>.
+I'm Xinye Tao, aka Tabokie\*.
 
 I code for a living, specialized in System and Graphics, currently employed at [PingCAP](https://en.pingcap.com).
 
@@ -21,6 +21,6 @@ I use different languages for writing, please feel free to contact me for possib
 <br />
 <br />
 
-\*1. pronounced as /təˈbōkē/.
+\* pronounced as /təˈbōkē/.
 
-\*. styling of this site is greatly inspired by Christine Dodrill's personal [blog](https://christine.website/).
+styling of this site is greatly inspired by Christine Dodrill's personal [blog](https://christine.website/).
