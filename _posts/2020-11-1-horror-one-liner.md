@@ -6,8 +6,8 @@ category: fiction
 
 He hasn't eaten for a week now. How is he still alive?
 
-Monday, Tuesday, Wednesday, ..., Sunday. Seven pairs of underpants for seven days. But wait, whose pants am I wearing now?
+1, 2, 3, 4, 5, 6, 7. Seven pairs for seven days. But wait, then whose pants am I wearing now?
 
-I touch my hair, feels like rough paper. I touch the face, the body. Is it mine? Certainly not.
+I touch my hair. It feels like rough paper. Then I touch the face, the body. Are they mine? Certainly not.
 
 You decides not to mind the hands and feet crawling over your body.
