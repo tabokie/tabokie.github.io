@@ -1,7 +1,8 @@
 ---
 layout: sidebar
 title: Tabokie's Page
-avatar: /assets/img/vampire.png
+avatar: /assets/favicon/android-chrome-512x512.png
+avatar_old: /assets/img/vampire.png
 ---
 
 I'm Xinye Tao, aka Tabokie\*.
@@ -21,6 +22,6 @@ I use different languages for writing, please feel free to contact me for possib
 <br />
 <br />
 
-\* pronounced as /təˈbōkē/.
+\* Pronounced as /təˈbōkē/.
 
-styling of this site is greatly inspired by Christine Dodrill's personal [blog](https://christine.website/).
+Styling of this site is greatly inspired by Christine Dodrill's personal [blog](https://christine.website/).
