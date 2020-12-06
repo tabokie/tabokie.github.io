@@ -54,6 +54,18 @@
       <span class="hidden-text"># {{page.category}}, {{ prefix }}</span>
       {% endif %}
       {{content}}
+      {% if page.childs %}
+        <ul>
+        Subtopics:
+        {% for child in page.childs %}
+          {% for p in site.subtopics %}
+            {% if p.id == child %}
+              <li><a href="{{p.url}}">{{p.title}}</a></li>
+            {% endif %}
+          {% endfor %}
+        {% endfor %}
+        </ul>
+      {% endif %}
       </div>
 
       {% include footer.html %}
