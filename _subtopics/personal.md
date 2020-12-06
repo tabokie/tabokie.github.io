@@ -8,11 +8,11 @@ title: Personal
 
 ## Track progress and manage weekly TODOs with Github Project.
 
-- At most one major project per week
-- Each project must have precise deadline
+- At most one major project per week (bandwidth control, production capability, whatever you call it).
+- Each project must have precise deadline and precise boundaries (eliminate ignorance inside the boundaries).
 - New projects are put to cooling pool for at least a week before getting enrolled.
 
-## Set daily time budget for untracked activities.
+## Set daily time budget for non-purposeful activities.
 
 I uses Apple's `Shortcuts` app to time events (persistently store intermediate state to document) and record them to `Health` app's `mindful` minutes (which is useless to me), so that daily statistics can be summarized.
 
