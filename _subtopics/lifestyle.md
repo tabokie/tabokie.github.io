@@ -118,10 +118,6 @@ On the format: It is an imitation of "Tractatus Logico-Philosophicus" by Wittgen
 
 1.4.2.1.1. Mobile app or machanical clock with a symbolic time limit (2h)
 
-\*. Reference
-
-"Atomic Habits" by James Clear, ...
-
 ## 2. Money
 
 ## 3. Relationship
@@ -167,6 +163,8 @@ On the format: It is an imitation of "Tractatus Logico-Philosophicus" by Wittgen
 \*.2.1.1. e.g. optimal sleeping schedule
 
 ## Reference
+
+"Atomic Habits" by James Clear
 
 [100 Tips for a Better Life](https://www.lesswrong.com/posts/7hFeMWC6Y5eaSixbD/100-tips-for-a-better-life) ([HN](https://news.ycombinator.com/item?id=25518730))
 
