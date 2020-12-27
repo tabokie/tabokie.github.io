@@ -11,3 +11,5 @@ He hasn't eaten for a week now. How is he still alive?
 I touch my hair. It feels like rough paper. Then I touch the face, the body. Are they mine? Certainly not.
 
 You decides not to mind the hands and feet crawling over your body.
+
+I enter the wrong room but people inside look the same.

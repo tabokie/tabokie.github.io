@@ -166,6 +166,8 @@ On the format: It is an imitation of "Tractatus Logico-Philosophicus" by Wittgen
 
 4.2.3. Collect old photos from around the world
 
+4.2.4. Take a week's leave without thinking about time and causality
+
 4.3. Habits
 
 4.3.1. Read several books concurrently, each book at a specific spot (`L'amour l'après-midi`)
