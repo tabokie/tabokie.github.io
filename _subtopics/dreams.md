@@ -6,4 +6,4 @@ title: Dreams
 
 [My Dreams (2020 Part I)](/fiction/2020/05/29/my-dreams-2020-1.html)
 
-<!-- [My Dreams (2020 Part II)](/fiction/2020/12/21/my-dreams-2020-2.html) -->
+[My Dreams (2020 Part II)](/fiction/2020/12/21/my-dreams-2020-2.html)

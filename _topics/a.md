@@ -1,6 +1,6 @@
 ---
 layout: blog
-title: Incremental
+title: "*, or the failure of Taxonomy"
 childs:
   - /subtopics/lifestyle
   - /subtopics/quote
