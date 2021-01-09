@@ -1,38 +1,4 @@
-input[type=checkbox]:checked ~ .indicator {
-  color: var(--color);
-  opacity: 1;
-  text-decoration: none;
-}
-
-label.checkbox-container {
-  /*color: var(--emphsis-color);*/
-  transition: all .15s cubic-bezier(.4, 0, 0, 1);
-  -webkit-transition: all .15s cubic-bezier(.4, 0, 0, 1);
-  -moz-transition: all .15s cubic-bezier(.4, 0, 0, 1);
-  -o-transition: all .15s cubic-bezier(.4, 0, 0, 1);
-}
-
-.indicator {
-  color: var(--camouflage-color);
-  display: inline;
-  /*text-decoration: line-through;*/
-}
-
-input[type=checkbox]:checked ~ .n-indicator {
-  color: var(--camouflage-color);
-  text-decoration: none;
-}
-
-.n-indicator {
-  color: var(--color);
-  opacity: 1;
-  display: inline;
-  /*text-decoration: line-through;*/
-}
-
-/* Hide the browser's default checkbox */
 .checkbox-container input {
-  color: var(--emphsis-color);
   position: absolute;
   opacity: 0;
   cursor: pointer;
@@ -42,9 +8,13 @@ input[type=checkbox]:checked ~ .n-indicator {
   margin-top: 5px;
 }
 
-/* On mouse-over, add a grey background color */
-.checkbox-hightlight:hover {
-  background-color: var(--highlight-color);
+.checkbox-container input ~ b {
+  color: var(--highlight-color);
+  transition: var(--hover-transition);
+  -webkit-transition: var(--hover-transition);
+  -moz-transition: var(--hover-transition);
+  -o-transition: var(--hover-transition);
+  border-bottom: 1px solid var(--highlight-color);
 }
 
 .checkbox-container:hover input ~ b {
