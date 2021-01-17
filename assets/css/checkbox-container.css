@@ -1,3 +1,26 @@
+input[type=checkbox]:checked ~ b .indicator {
+  color: var(--color);
+  opacity: 1;
+  text-decoration: none;
+}
+
+input[type=checkbox]:checked ~ b .n-indicator {
+  color: var(--camouflage-color);
+  text-decoration: none;
+}
+
+.indicator {
+  color: var(--camouflage-color);
+  display: inline;
+}
+
+.n-indicator {
+  color: var(--color);
+  opacity: 1;
+  display: inline;
+  /*text-decoration: line-through;*/
+}
+
 .checkbox-container input {
   position: absolute;
   opacity: 0;
