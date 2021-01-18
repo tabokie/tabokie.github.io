@@ -94,7 +94,7 @@
 }
 
 body::-webkit-scrollbar {
-    width: 1.5em;
+    width: 0.5em;
 }
  
 body::-webkit-scrollbar-track {
@@ -102,7 +102,7 @@ body::-webkit-scrollbar-track {
 }
  
 body::-webkit-scrollbar-thumb {
-  background-color: var(--highlight-color);
+  background-color: var(--emphsis-color);
 }
 
 .wide-spacing {
