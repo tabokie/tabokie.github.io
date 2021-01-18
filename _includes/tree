@@ -21,7 +21,7 @@
     {% if item.childs %}
     <label class="checkbox-container">
       <input type="checkbox" id="{{cur}}Selected">
-      <b>[+]</b>
+      <b>[<span class="n-indicator">+</span>]</b>
     </label>
     {% else %}[<b>-</b>]
     {% endif %}
