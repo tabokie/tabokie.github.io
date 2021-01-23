@@ -4,9 +4,9 @@ title: Lifestyle
 ---
 <span class="hidden-text"># Created: 2020-12-05; Modified: 2020-12-27</span>
 
-On the format: It is an imitation of "Tractatus Logico-Philosophicus" by Wittgenstein, which preseves the logic between arguments without an essay-ish form hard for later amendments.
+On the format: It is an imitation of "Tractatus Logico-Philosophicus" by Wittgenstein, which preserves the logic between statements without an essay-ish form difficult for later amendments.
 
-## 1 Working
+## 1 Efficiency
 
 **1.1 Know exactly when to work and what to work on**
 
@@ -36,6 +36,8 @@ On the format: It is an imitation of "Tractatus Logico-Philosophicus" by Wittgen
 
 1.1222 Balance between immediate desire and long term plan
 
+1.123 Be specific
+
 **1.2 Make it easy to start working**
 
 1.21 Understand "planning" is not "working"
@@ -44,11 +46,11 @@ On the format: It is an imitation of "Tractatus Logico-Philosophicus" by Wittgen
 
 1.212 Perfect plan does not exist and even more so if you never enforce it
 
+1.213 [Analysis paralysis](https://en.m.wikipedia.org/wiki/Analysis_paralysis)
+
 1.22 Environment indicates behaviour
 
 1.221 Forbid yourself from doing unrelated things
-
-1.2211 e.g. Use seperate browser for job work, private work, relaxing
 
 1.222 Surround yourself with related things
 
@@ -76,7 +78,7 @@ On the format: It is an imitation of "Tractatus Logico-Philosophicus" by Wittgen
 
 1.251 Keep busy if you really need to stall
 
-1.2511 Reading, which is rarely related to what I’m writing, or hoping to write, helps get started writing ([Susan Santag Paris Review](https://fs.blog/2013/05/susan-sontag-how-i-write/))
+1.2511 Reading, which is rarely related to what I’m writing, or hoping to write, helps get started writing ([Susan Sontag Paris Review](https://fs.blog/2013/05/susan-sontag-how-i-write/))
 
 1.2512 Do the next task in queue
 
@@ -114,7 +116,9 @@ On the format: It is an imitation of "Tractatus Logico-Philosophicus" by Wittgen
 
 1.3241 Never miss it twice
 
-1.325 Involves other persons to play, e.g. make a bet, set a deadline
+1.325 Involves other people to play
+
+1.3251 e.g. make a bet, set a deadline
 
 1.33 Maintain a positive emotional image of working
 
@@ -124,31 +128,51 @@ On the format: It is an imitation of "Tractatus Logico-Philosophicus" by Wittgen
 
 1.332 Tools
 
-1.3321 Write with a felt-tip pen, or sometimes a pencil, on yellow or white legal pads. ([Susan Santag Paris Review](https://fs.blog/2013/05/susan-sontag-how-i-write/))
+1.3321 Susan Sontag writes with a felt-tip pen, or sometimes a pencil, on yellow or white legal pads. ([Paris Review](https://fs.blog/2013/05/susan-sontag-how-i-write/))
 
 **1.4 Misc**
 
-1.41 Keep a worklog
+1.41 Reduce time dissipation
 
-1.42 Reduce time dissipation
+1.411 Time non-purposeful activity (thinking it as film exposure)
 
-1.421 Time non-purposeful activity (thinking it as film exposure)
+1.4111 Mobile app or mechanical clock with a symbolic time limit (2h)
 
-1.4211 Mobile app or mechanical clock with a symbolic time limit (2h)
+1.4112 Even if it's relaxing day, do it as a habit
 
-1.43 [TODO] Information flow control
+1.42 [TODO] Information flow control
 
-1.431 information should be arranged in a priority aligned with work
+1.421 information should be arranged in a priority aligned with work
 
-1.4311 Urgent over important
+1.4211 Urgent over important
+
+**1.5 My workflow**
+
+1.51 Daily schedule
+
+1.511 8:30AM wake up and leetcode for 30 minutes
+
+1.512 9:30PM learn French on Sofa for 30 minutes
+
+1.513 0:00AM read poem on Bed for 30 minutes
+
+1.514 0:30AM meditate for 30 minutes and go to sleep
+
+1.52 Tasking
+
+1.521 Monthly role, weekly project
+
+1.522 One browser for private work, one browser for company work, one browser for relaxation
+
+1.523 Keep a worklog
 
 ## 2 Money
 
 ## 3 Social
 
-## 4 Fun
+## 4 Have Fun Living
 
-4.1 Break boundaries
+**4.1 Breach boundaries**
 
 4.11 Sleep everywhere in your home
 
@@ -158,7 +182,7 @@ On the format: It is an imitation of "Tractatus Logico-Philosophicus" by Wittgen
 
 4.14 Don't wear shoes outside
 
-4.2 See more
+**4.2 See more**
 
 4.21 Share multiple flats with multiple people
 
@@ -168,19 +192,19 @@ On the format: It is an imitation of "Tractatus Logico-Philosophicus" by Wittgen
 
 4.24 Take a week's leave without thinking about time and causality
 
-4.3 Habits
+**4.3 Habits**
 
 4.31 Read several books concurrently, each book at a specific spot (`L'amour l'après-midi`)
 
-4.4 Tips
+**4.4 Tips**
 
-4.41 Stash private savings in unopened book (`La carrière de Suzanne`)
+4.41 Stash private savings in unopened books (`La carrière de Suzanne`)
 
 ## \* Methodology
 
-\*.1 automation
+**\*.1 automation**
 
-\*.2 experiment
+**\*.2 experiment**
 
 \*.21 double blind experiment
 
@@ -188,11 +212,17 @@ On the format: It is an imitation of "Tractatus Logico-Philosophicus" by Wittgen
 
 \*.211 e.g. optimal sleeping schedule
 
+**\*.3 continous retrospection**
+
+\*.31 measure creativity and stress: dream log (see [mine](/subtopics/dreams.html))
+
 ## Reference
 
 "Deep Work" by Cal Newport
 
 [RECOMMENDED] "Atomic Habits" by James Clear
+
+"Seven Habits of Highly Effective People" by Stephen R. Covey
 
 [TODO] "Daily Rituals" by Mason Currey
 
@@ -205,3 +235,5 @@ On the format: It is an imitation of "Tractatus Logico-Philosophicus" by Wittgen
 [Things you're allowed to do](https://milan.cvitkovic.net/writing/things_youre_allowed_to_do/)
 
 [Structured Procrastination](http://www.structuredprocrastination.com/)
+
+[TODO] [HOWTO: Be more productive](http://www.aaronsw.com/weblog/productivity)
