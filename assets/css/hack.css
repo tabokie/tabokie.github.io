@@ -93,6 +93,10 @@
   line-height: 1.2em;
 }
 
+.pad {
+  margin-left:1em;
+}
+
 body::-webkit-scrollbar {
     width: 0.5em;
 }
@@ -488,7 +492,7 @@ a:hover {
   content: "";
 }
 .hack code {
-  font-weight: 700;
+  /*font-weight: 700;*/
 }
 .hack code:after,
 .hack code:before {
