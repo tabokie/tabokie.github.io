@@ -4,13 +4,13 @@ title: Futex Reacquainted
 category: tech
 ---
 
-To be fair, the futex (Fast Userspace muTEX) syscall has a rather misleading name, in the sense that it simply isn't a mutex. In the original 2002 paper (Fuss, Futexes and Furwocks: Fast Userlevel Locking in Linux), it is invented specifically to implement a fast mutex, but capable of much more. I prefer to think of futex as a minimal useful subset that can fulfil most high level synchronization constructs.
+To be fair, the futex (Fast Userspace muTEX) syscall has a rather misleading name, in the sense that it simply isn't a mutex. In the original 2002 paper (Fuss, Futexes and Furwocks: Fast Userlevel Locking in Linux), it was invented specifically to implement a fast mutex, but capable of much more. I prefer to think of futex as a minimal useful subset that can fulfil most high level synchronization constructs.
 
 ## Minimal Useful Subset
 
 Before futex was borned, people in need of a proper mutex (waiter actually blocks) have to use heavy kernel objects like file lock ([fcntl](https://man7.org/linux/man-pages/man2/fcntl.2.html)) or [System V semaphore](https://man7.org/linux/man-pages/man7/sysvipc.7.html). Since system calls are toxic to performance, kernel developers then seeked to compress kernel involvement in userspace synchronization by inventing futex.
 
-So essentially this design process is a code refactor that encapsulates the thread blocking functionality into a new lightweight syscall. And such blocking can be easily avoided when the lock is less contended.
+So essentially this design process is a code refactor that encapsulates the thread blocking functionality into a new lightweight syscall. And such blocking can be easily elided when the lock isn't contended.
 
 Here by "lightweight" I mean the resource allocated for a futex should be minimal, so that thousands of futexes could live happily within a commodity setup. This requirement implicitly forbids the use of file descriptor as futex handle.
 
@@ -53,7 +53,7 @@ In the incorrect version, this thread can block indefinitely when the signal has
     ----------
 </div>
 
-Kernel uses a fixed-size, seperate chaining, central hash table to store mappings between user provided address and the threads blocking on it (wait queue). A futex won't occupy any resource until it becomes hot. What puzzles me a little is why they didn't bother to maintain private wait queues for individual futexes, guess the benefit of fewer key comparisons isn't worth the complexity.
+Kernel uses a fixed-size, seperate chaining, central hash table to store mappings between user provided address and the waiting threads (wait queue). A futex won't occupy any resource until some threads start blocking on it. What puzzles me a little is why they didn't bother to maintain private wait queues for individual futexes, guess the benefit of fewer key comparisons isn't worth the complexity.
 
 Unsurprisingly, this table becomes a performance bottleneck as computing nodes scale out, and poses challenge to system predictability. In a [talk](https://www.youtube.com/watch?v=-8c47dHuGIY) by SUSE engineer, three major issues were identified:
 
@@ -89,7 +89,7 @@ When problems are defined, solutions aren't that far either. Below is a list of 
 
 ## Romance Between Futex & Condition Variable
 
-I was going to take a closer look at how pthread implements condition variable with futexes, and unveil some of the mysteries that prompted me to write this post in the first place. But things got out of hand pretty soon.
+I was going to take a closer look at how pthread(NPTL) implements condition variable with futexes, and unveil some of the mysteries that prompted me to write this post in the first place.
 
 To look "closer", I skimmed through the commits of NPTL's condvar from 2002 to 2016. Even though during this period the code skeleton is relatively stable, but minor details kept changing. Plus the commit messages being chaotic, it's almost impossible to reason those changes.
 
@@ -161,7 +161,7 @@ fn cond_broadcast(cv):
   }
 ```
 
-What interests me most is how condvar interplays with futexes. Unlike what I expected, condvar owns two futexes, the first is `cv.lock` used to synchronize internal modifications, the second is `cv.futex` used to park threads. Besides them, condvar also interacts with the user provided mutex, which has one futex inside.
+What interests me most is how condvar interplays with futexes. Unlike what I expected, condvar owns two futexes: the first is `cv.lock`, used to synchronize internal modifications; the second is `cv.futex`, used to park threads. Besides them, condvar also interacts with the user provided mutex, which has one futex inside.
 
 It is important for condvar to manage its own lock, because `cond_signal` can be called without lock, stated by [POSIX](https://pubs.opengroup.org/onlinepubs/009696699/functions/pthread_cond_broadcast.html):
 
@@ -190,9 +190,9 @@ FUTEX_WAKE_OP(cv.futex, 1, cv.lock, 1);             FUTEX_WAIT(cv.futex);
   }
 ```
 
-One thing I haven't figured out though is why calling `FUTEX_WAKE(1)` without lock is racy.
+One thing I haven't figured out though is why calling `FUTEX_WAKE(1)` without lock is racy, which seems like a straightforward fix to this issue.
 
-Similarly, `cond_broadcast` tries to use `FUTEX_CMP_REQUEUE`, which is the kernel's implementation of "wait morphing". The wait queue of `cv.futex` is moved directly to user's mutex, so that when the first woken thread finishes its work (by releasing mutex), rest of the threads can be woken up in sequence.
+Similarly, `cond_broadcast` tries to use `FUTEX_CMP_REQUEUE`, which is the kernel's implementation of "wait morphing". The wait queue of `cv.futex` is moved directly to user's mutex, so that when the first woken thread finishes its work (by releasing mutex), rest of the threads can be woken up in sequence. In this way, we won't encounter "thundering herd" problem where multiple threads wake up at the same time competing for the same mutex.
 
 ```rust
 // cond_wait (userspace)
@@ -205,7 +205,7 @@ FUTEX_WAIT(cv.futex);
 lock(cv.lock);
 /* modify internals */
 unlock(cv.lock);
-pthread_mutex_cond_lock(mutex) // ---- (2)
+pthread_mutex_cond_lock(mutex); // --- (2)
 ```
 
 Notice that instead of normal mutex functions, condvar uses `pthread_mutex_unlock_usercnt` and `pthread_mutex_cond_lock` to avoid changing mutex's user count. When there are multiple waiters, mutex is guaranteed to stay in contended state, so that (1) could happen, and (2) won't park the woken thread again.
@@ -370,7 +370,7 @@ Sure, why not. -->
 
 ## What's More
 
-We've seen how futex is driven to its limit by pthread, multiple syscall commands are brought to kernel for that purpose. But in 2016, driven by a stronger ordering requirement, a [redesign](https://github.com/bminor/glibc/commit/ed19993b5b0d05d62cc883571519a67dae481a14) from the ground up is merged into pthread library, abandoning those eye-catching optimizations from decade before. You are welcome to replay their debates on this matter.
+We've seen how futex is driven to its limit by pthread, multiple syscall commands are brought to kernel for that purpose. But in 2016, in order to satisfy a stronger ordering requirement, a [redesign](https://github.com/bminor/glibc/commit/ed19993b5b0d05d62cc883571519a67dae481a14) from the ground up is merged into pthread library, abandoning those eye-catching optimizations from decades before. You are welcome to replay their debates on this matter.
 
 Futex *blocks* threads, which is powerful yet dangerous. That's why there are much more complexities behind their innocent looks. To go deeper, I found these kernel writeups to be most informative:
 
