@@ -20,26 +20,11 @@
   {% endif %}
     {% if item.childs %}
     <label class="checkbox-container">
-      <input type="checkbox" id="{{cur}}Selected">
+      <input type="checkbox" id="{{cur}}Selected" />
       <b>[<span class="n-indicator">+</span>]</b>
-    </label>
-    {% else %}[<b>-</b>]
-    {% endif %}
-     - <a href="{{item.url}}">{{item.title}}</a>
+      - <a href="{{item.url}}">{{item.title}}</a>
       {% if item.childs %}
-        <script>
-        $('#{{cur}}Selected').click(function() {
-          $("#showOn{{cur}}").toggle(this.checked);
-          if ({{level}} > 0) {
-            if(this.checked) {
-              $("#{{cur}}Selected").parent().parent().prop("id","nested-li-last");
-            } else {
-              $("#{{cur}}Selected").parent().parent().prop("id","nested-li");
-            }
-          }
-        });
-        </script>
-        <ul id="showOn{{cur}}" style="display: none;margin-top:0px;margin-bottom: 0px;">
+        <ul id="showOn{{cur}}" style="margin-top:0px;margin-bottom: 0px;">
           {% assign tree = "" | split: ',' %}
           {% for child in item.childs %}
             {% for p in site.subtopics %}
@@ -52,6 +37,9 @@
           {% include tree %}
         </ul>
       {% endif %}
+    </label>
+    {% else %}[<b>-</b>] - <a href="{{item.url}}">{{item.title}}</a>
+    {% endif %}
   </li>
 {% endfor %}
 {% assign level = level | minus:1 %}

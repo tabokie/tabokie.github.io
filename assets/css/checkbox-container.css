@@ -9,6 +9,14 @@ input[type=checkbox]:checked ~ b .n-indicator {
   text-decoration: none;
 }
 
+input[type=checkbox]:checked ~ ul {
+  display: inline;
+}
+
+.checkbox-container ul {
+  display: none;
+}
+
 .indicator {
   color: var(--camouflage-color);
   display: inline;
@@ -40,6 +48,6 @@ input[type=checkbox]:checked ~ b .n-indicator {
   border-bottom: 1px solid var(--highlight-color);
 }
 
-.checkbox-container:hover input ~ b {
+/*.checkbox-container:hover input ~ b {
   background-color: var(--highlight-color);
-}
+}*/
