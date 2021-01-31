@@ -48,6 +48,6 @@ input[type=checkbox]:checked ~ ul {
   border-bottom: 1px solid var(--highlight-color);
 }
 
-/*.checkbox-container:hover input ~ b {
+.checkbox-container input ~ b:hover {
   background-color: var(--highlight-color);
-}*/
+}
