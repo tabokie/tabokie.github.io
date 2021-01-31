@@ -87,12 +87,133 @@ When problems are defined, solutions aren't that far either. Below is a list of 
 
 6. Use private hash table for each process ([rfc](https://lore.kernel.org/lkml/49C4D5A0.5020106@cosmosbay.com/t/))
 
-## [WIP] Romance Between Futex & Condition Variable
+## Romance Between Futex & Condition Variable
 
 I was going to take a closer look at how pthread implements condition variable with futexes, and unveil some of the mysteries that prompted me to write this post in the first place. But things got out of hand pretty soon.
 
-To look "closer", I skimmed through the commits of NPTL's condvar from 2002 to 2016, during which the code skeleton is relatively consistent. And finally I collected three versions of code:
+To look "closer", I skimmed through the commits of NPTL's condvar from 2002 to 2016. Even though during this period the code skeleton is relatively stable, but minor details kept changing. Plus the commit messages being chaotic, it's almost impossible to reason those changes.
 
+This leaves me no choice but to read the latest implementation (in 2016), which is simplified to this pseudocode:
+
+```rust
+/** cv's data members **
+ * lock: internal mutex
+ * wait_seq: sequence number for waiter
+ * wakeup_seq: sequence number for wakeup signaled
+ * woken_seq: sequence number for woken thread
+ * broadcast_seq: sequence number for broadcast signaled
+ * mutex_ref: reference to user mutex
+ */
+fn cond_wait(cv, mutex):
+  lock(cv.lock);
+  unlock(mutex);
+  cv.wait_seq ++;
+  cv.futex ++;
+  cv.mutex_ref = mutex;
+  let wakeup_seq_before = cv.wakeup_seq;
+  let broadcast_seq_before = cv.broadcast_seq;
+  loop {
+    let futexval = cv.futex;
+    unlock(cv.lock);
+    let ret = FUTEX_WAIT(cv.futex, futexval);
+    lock(cv.lock);
+    if broadcast_seq_before != cv.broadcast_seq {
+      break;
+    }
+    if cv.wakeup_seq != wakeup_seq_before && cv.wakeup_seq != cv.woken_seq {
+      cv.woken_seq ++;
+      break;
+    }
+    if ret == TIMEDOUT {
+      cv.wakeup_seq ++;
+      cv.woken_seq ++;
+      break;
+    }
+  }
+  unlock(cv.lock);
+  lock(mutex);
+
+fn cond_signal(cv):
+  lock(cv.lock);
+  if cv.wait_seq > cv.wakeup_seq {
+    cv.wakeup_seq ++;
+    cv.futex ++;
+    if FUTEX_WAKE_OP(cv.futex, 1, cv.lock, 1, FUTEX_OP_CLEAR_WAKE_IF_GT_ONE).is_err() {
+      FUTEX_WAKE(cv.futex, 1);
+    }
+  }
+  unlock(cv.lock);
+
+fn cond_broadcast(cv):
+  lock(cv.lock);
+  if cv.wait_seq > cv.wakeup_seq {
+    cv.wakeup_seq = cv.wait_seq;
+    cv.woken_seq = cv.wait_seq;
+    cv.futex = cv.wait_seq * 2;
+    let futexval = cv.futex;
+    cv.broadcast_seq ++;
+    unlock(lock);
+    if FUTEX_CMP_REQUEUE(cv.futex, 1, ALL, cv.mutex_ref, futexval).is_err() {
+      FUTEX_WAKE(cv.futex, ALL);
+    }
+  } else {
+    unlock(cv.lock);
+  }
+```
+
+What interests me most is how condvar interplays with futexes. Unlike what I expected, condvar owns two futexes, the first is `cv.lock` used to synchronize internal modifications, the second is `cv.futex` used to park threads. Besides them, condvar also interacts with the user provided mutex, which has one futex inside.
+
+It is important for condvar to manage its own lock, because `cond_signal` can be called without lock, stated by [POSIX](https://pubs.opengroup.org/onlinepubs/009696699/functions/pthread_cond_broadcast.html):
+
+>The pthread_cond_broadcast() or pthread_cond_signal() functions may be called by a thread whether or not it currently owns the mutex that threads calling pthread_cond_wait() or pthread_cond_timedwait() have associated with the condition variable during their waits; however, if predictable scheduling behavior is required, then that mutex shall be locked by the thread calling pthread_cond_broadcast() or pthread_cond_signal().
+
+And a condvar can even be paired with multiple mutexes (not at the same time), quote [POSIX](https://pubs.opengroup.org/onlinepubs/007908775/xsh/pthread_cond_wait.html) again:
+
+>The effect of using more than one mutex for concurrent pthread_cond_wait() or pthread_cond_timedwait() operations on the same condition variable is undefined; that is, a condition variable becomes bound to a unique mutex when a thread waits on the condition variable, and this (dynamic) binding ends when the wait returns.
+
+It's also important to notice that multiple options are available to send out wakeups:
+
+`cond_signal` first attempts to call `FUTEX_WAKE_OP` before falling back to traditional `FUTEX_WAKE`. This particular command was introduced to kernel in [2005](https://github.com/torvalds/linux/commit/4732efbeb997189d9f9b04708dc26bf8613ed721) specifically for optimizing `cond_signal`, which has the capability to modify and conditionally wakes up a second futex. The optimization targets at avoiding "hurry up and wait" situation, where "this waiter wakes up and after a few instructions it attempts to acquire the cv internal lock, but that lock is still held by the thread calling pthread_cond_signal". It works by moving the whole unlock procedure into kernel space:
+
+```rust
+// cond_signal (userspace)                          // cond_wait (userspace)
+FUTEX_WAKE_OP(cv.futex, 1, cv.lock, 1);             FUTEX_WAIT(cv.futex);
+  // (kernel)                                       // blocked //
+  let (key1, key2) = (key(cv.futex), key(cv.lock)); //         //
+  spin_lock(min(key1, key2));                       //         //
+  spin_lock(max(key1, key2));                       //         //
+  let ret = OP_UNLOCK(cv.lock);                     //         //
+  wake(key1, 1);  // ------------------------------>
+                                                    lock(cv.lock);  // already unlocked
+  if ret {                                          //
+    wake(key2, 1);  // ---------------------------->  in case the lock is contended
+  }
+```
+
+One thing I haven't figured out though is why calling `FUTEX_WAKE(1)` without lock is racy.
+
+Similarly, `cond_broadcast` tries to use `FUTEX_CMP_REQUEUE`, which is the kernel's implementation of "wait morphing". The wait queue of `cv.futex` is moved directly to user's mutex, so that when the first woken thread finishes its work (by releasing mutex), rest of the threads can be woken up in sequence.
+
+```rust
+// cond_wait (userspace)
+pthread_mutex_unlock_usercnt(mutex, 0);
+FUTEX_WAIT(cv.futex);
+//
+// get requeued, equivalent to FUTEX_WAIT(mutex)
+//
+// someone releases mutex, woken ----- (1)
+lock(cv.lock);
+/* modify internals */
+unlock(cv.lock);
+pthread_mutex_cond_lock(mutex) // ---- (2)
+```
+
+Notice that instead of normal mutex functions, condvar uses `pthread_mutex_unlock_usercnt` and `pthread_mutex_cond_lock` to avoid changing mutex's user count. When there are multiple waiters, mutex is guaranteed to stay in contended state, so that (1) could happen, and (2) won't park the woken thread again.
+
+
+
+<!-- 
+When
 In this version (around 2002), signal calls are outside the lock.
 
 ```rust
@@ -193,77 +314,8 @@ fn cond_broadcast(cv):
   unlock(cv.lock);
 ```
 
-Finally, with the third version, powerful tools like FUTEX_CMP_REQUEUE and [FUTEX_WAKE_OP](https://github.com/torvalds/linux/commit/4732efbeb997189d9f9b04708dc26bf8613ed721) are added into the code path:
-
-```rust
-/*
- * lock: internal mutex
- * wait_seq: sequence number for waiter
- * wakeup_seq: sequence number for wakeup signaled
- * woken_seq: sequence number for woken threads
- * broadcast_seq: sequence number for broadcast threads
- */
-fn cond_wait(cv, mutex):
-  lock(cv.lock);
-  unlock(mutex);
-  cv.wait_seq ++;
-  cv.futex ++;
-  cv.mutex_req = mutex;
-  let wakeup_seq_before = cv.wakeup_seq;
-  let broadcast_seq_before = cv.broadcast_seq;
-  loop {
-    let futexval = cv.futex;
-    unlock(cv.lock);
-    let ret = FUTEX_WAIT(cv.futex, futexval);
-    lock(cv.lock);
-    if broadcast_seq_before != cv.broadcast_seq {
-      break;
-    }
-    if cv.wakeup_seq != wakeup_seq_before && cv.wakeup_seq != cv.woken_seq {
-      cv.woken_seq ++;
-      break;
-    }
-    if ret == TIMEDOUT {
-      cv.wakeup_seq ++;
-      cv.woken_seq ++;
-      break;
-    }
-  }
-  unlock(cv.lock);
-  lock(mutex);
-
-fn cond_signal(cv):
-  lock(cv.lock);
-  if cv.wait_seq > cv.wakeup_seq {
-    cv.wakeup_seq ++;
-    cv.futex ++;
-    // lll_futex_wake_unlock
-    if FUTEX_WAKE_OP(cv.futex, 1, cv.lock, 1, FUTEX_OP_CLEAR_WAKE_IF_GT_ONE).is_err() {
-      FUTEX_WAKE(cv.futex, 1);
-    }
-  }
-  unlock(cv.lock);
-
-fn cond_broadcast(cv):
-  lock(cv.lock);
-  if cv.wait_seq > cv.wakeup_seq {
-    cv.wakeup_seq = cv.wait_seq;
-    cv.woken_seq = cv.wait_seq;
-    cv.futex = cv.wait_seq * 2;
-    let futexval = cv.futex;
-    cv.broadcast_seq ++;
-    unlock(lock);
-    if FUTEX_CMD_REQUEUE(cv.futex, 1, ALL, cv.mutex_req, futexval).is_err() {
-      FUTEX_WAKE(cv.futex, ALL);
-    }
-  } else {
-    unlock(cv.lock);
-  }
-```
-
 Sadly, I was unable to find detailed commit messages for those changes. Therefore this section is suspended until I find some more time to verify them with TLA+. After that, I'll have to checkout the latest [implementation](https://github.com/bminor/glibc/commit/ed19993b5b0d05d62cc883571519a67dae481a14) came out at 2016, and an interesting [bug report](https://sourceware.org/bugzilla/show_bug.cgi?id=25847) with [TLA+ attempts](https://probablydance.com/2020/10/31/using-tla-in-the-real-world-to-understand-a-glibc-bug/).
 
-<!-- 
 **- Q: Why `wait` with mutex held?**
 
 This is the same "compare-and-block" pattern discussed before. We have to make sure certain condition isn't already true before going to sleep, so the lock release and sleep must appear as one atomic operation.
@@ -318,7 +370,9 @@ Sure, why not. -->
 
 ## What's More
 
-Futex *blocks* threads. You should know how dangerous it could be in critical systems. That's why there are much more complexities behind their innocent looks. To go deeper, I found these kernel writeups to be most informative:
+We've seen how futex is driven to its limit by pthread, multiple syscall commands are brought to kernel for that purpose. But in 2016, driven by a stronger ordering requirement, a [redesign](https://github.com/bminor/glibc/commit/ed19993b5b0d05d62cc883571519a67dae481a14) from the ground up is merged into pthread library, abandoning those eye-catching optimizations from decade before. You are welcome to replay their debates on this matter.
+
+Futex *blocks* threads, which is powerful yet dangerous. That's why there are much more complexities behind their innocent looks. To go deeper, I found these kernel writeups to be most informative:
 
 [PI-futex](https://www.kernel.org/doc/Documentation/pi-futex.txt) to avoid priority inversion, which replies on [RT-mutex](https://www.kernel.org/doc/Documentation/locking/rt-mutex.txt) ([design](https://www.kernel.org/doc/Documentation/locking/rt-mutex-design.txt)) internally.
 
