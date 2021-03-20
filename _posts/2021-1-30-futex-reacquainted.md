@@ -8,7 +8,7 @@ To be fair, the futex (Fast Userspace muTEX) syscall has a rather misleading nam
 
 ## Minimal Useful Subset
 
-Before futex was borned, people in need of a proper mutex (waiter actually blocks) have to use heavy kernel objects like file lock ([fcntl](https://man7.org/linux/man-pages/man2/fcntl.2.html)) or [System V semaphore](https://man7.org/linux/man-pages/man7/sysvipc.7.html). Since system calls are toxic to performance, kernel developers then seeked to compress kernel involvement in userspace synchronization by inventing futex.
+Before futex was born, people in need of a proper mutex (waiter actually blocks) have to use heavy kernel objects like file lock ([fcntl](https://man7.org/linux/man-pages/man2/fcntl.2.html)) or [System V semaphore](https://man7.org/linux/man-pages/man7/sysvipc.7.html). Since system calls are toxic to performance, kernel developers then seeked to compress kernel involvement in userspace synchronization by inventing futex.
 
 So essentially this design process is a code refactor that encapsulates the thread blocking functionality into a new lightweight syscall. And such blocking can be easily elided when the lock isn't contended.
 
@@ -91,9 +91,9 @@ When problems are defined, solutions aren't that far either. Below is a list of 
 
 I was going to take a closer look at how pthread(NPTL) implements condition variable with futexes, and unveil some of the mysteries that prompted me to write this post in the first place.
 
-To look "closer", I skimmed through the commits of NPTL's condvar from 2002 to 2016. Even though during this period the code skeleton is relatively stable, but minor details kept changing. Plus the commit messages being chaotic, it's almost impossible to reason those changes.
+To look "closer", I skimmed through the commits of NPTL's condvar from 2002 to 2016. Even though during this period the code skeleton is relatively stable, the minor details kept changing. Plus the commit messages being chaotic, it's almost impossible to reason those changes.
 
-This leaves me no choice but to read the latest implementation (in 2016), which is simplified to this pseudocode:
+This leaves me no choice but to read the latest implementation from 2016, which is simplified to this pseudocode:
 
 ```rust
 /** cv's data members **
@@ -161,7 +161,7 @@ fn cond_broadcast(cv):
   }
 ```
 
-What interests me most is how condvar interplays with futexes. Unlike what I expected, condvar owns two futexes: the first is `cv.lock`, used to synchronize internal modifications; the second is `cv.futex`, used to park threads. Besides them, condvar also interacts with the user provided mutex, which has one futex inside.
+What interests me the most is how condvar interplays with futexes. Unlike what I expected, condvar owns two futexes: the first is `cv.lock`, used to synchronize internal modifications; the second is `cv.futex`, used to park threads. Besides them, condvar also interacts with the user provided mutex, which has one futex inside.
 
 It is important for condvar to manage its own lock, because `cond_signal` can be called without lock, stated by [POSIX](https://pubs.opengroup.org/onlinepubs/009696699/functions/pthread_cond_broadcast.html):
 
@@ -176,16 +176,16 @@ It's also important to notice that multiple options are available to send out wa
 `cond_signal` first attempts to call `FUTEX_WAKE_OP` before falling back to traditional `FUTEX_WAKE`. This particular command was introduced to kernel in [2005](https://github.com/torvalds/linux/commit/4732efbeb997189d9f9b04708dc26bf8613ed721) specifically for optimizing `cond_signal`, which has the capability to modify and conditionally wakes up a second futex. The optimization targets at avoiding "hurry up and wait" situation, where "this waiter wakes up and after a few instructions it attempts to acquire the cv internal lock, but that lock is still held by the thread calling pthread_cond_signal". It works by moving the whole unlock procedure into kernel space:
 
 ```rust
-// cond_signal (userspace)                          // cond_wait (userspace)
+// fn cond_signal [userspace]                       // fn cond_wait [userspace]
 FUTEX_WAKE_OP(cv.futex, 1, cv.lock, 1);             FUTEX_WAIT(cv.futex);
-  // (kernel)                                       // blocked //
-  let (key1, key2) = (key(cv.futex), key(cv.lock)); //         //
-  spin_lock(min(key1, key2));                       //         //
-  spin_lock(max(key1, key2));                       //         //
-  let ret = OP_UNLOCK(cv.lock);                     //         //
+  // [kernel]                                       /* blocked */
+  let (key1, key2) = (key(cv.futex), key(cv.lock)); /*         */
+  spin_lock(min(key1, key2));                       /*         */
+  spin_lock(max(key1, key2));                       /*         */
+  let ret = OP_UNLOCK(cv.lock);                     /*         */
   wake(key1, 1);  // ------------------------------>
                                                     lock(cv.lock);  // already unlocked
-  if ret {                                          //
+  if ret {
     wake(key2, 1);  // ---------------------------->  in case the lock is contended
   }
 ```
@@ -195,17 +195,22 @@ One thing I haven't figured out though is why calling `FUTEX_WAKE(1)` without lo
 Similarly, `cond_broadcast` tries to use `FUTEX_CMP_REQUEUE`, which is the kernel's implementation of "wait morphing". The wait queue of `cv.futex` is moved directly to user's mutex, so that when the first woken thread finishes its work (by releasing mutex), rest of the threads can be woken up in sequence. In this way, we won't encounter "thundering herd" problem where multiple threads wake up at the same time competing for the same mutex.
 
 ```rust
-// cond_wait (userspace)
+// fn cond_wait [userspace]
 pthread_mutex_unlock_usercnt(mutex, 0);
 FUTEX_WAIT(cv.futex);
-//
-// get requeued, equivalent to FUTEX_WAIT(mutex)
-//
-// someone releases mutex, woken ----- (1)
+// blocked //                         // fn cond_broadcast [userspace]
+                                      FUTEX_CMP_REQUEUE(cv.futex, cv.mutex_ref);
+// not the first in line <------------+-----------> // the first in line, woken
+/* queued to mutex */                               lock(mutex);
+FUTEX_WAIT(mutex);                                  /* do things with mutex */
+/* blocked */                                       unlock(mutex);
+/*         */                                         // examine if mutex is contended
+/*         */                                         FUTEX_WAKE(mutex);  // -- (1)
+// <--------------------------------------------------+
 lock(cv.lock);
 /* modify internals */
 unlock(cv.lock);
-pthread_mutex_cond_lock(mutex); // --- (2)
+pthread_mutex_cond_lock(mutex);  // --- (2)
 ```
 
 Notice that instead of normal mutex functions, condvar uses `pthread_mutex_unlock_usercnt` and `pthread_mutex_cond_lock` to avoid changing mutex's user count. When there are multiple waiters, mutex is guaranteed to stay in contended state, so that (1) could happen, and (2) won't park the woken thread again.
@@ -370,7 +375,7 @@ Sure, why not. -->
 
 ## What's More
 
-We've seen how futex is driven to its limit by pthread, multiple syscall commands are brought to kernel for that purpose. But in 2016, in order to satisfy a stronger ordering requirement, a [redesign](https://github.com/bminor/glibc/commit/ed19993b5b0d05d62cc883571519a67dae481a14) from the ground up is merged into pthread library, abandoning those eye-catching optimizations from decades before. You are welcome to replay their debates on this matter.
+We've seen how futex is driven to its limit by pthread, multiple syscall commands are brought to kernel for that purpose. But in 2016, in order to satisfy a stronger ordering requirement, a [redesign](https://github.com/bminor/glibc/commit/ed19993b5b0d05d62cc883571519a67dae481a14) from the ground up was proposed and merged into the library, abandoning these eye-catching optimizations from decades before. You are welcome to revisit their debates on this matter.
 
 Futex *blocks* threads, which is powerful yet dangerous. That's why there are much more complexities behind their innocent looks. To go deeper, I found these kernel writeups to be most informative:
 
