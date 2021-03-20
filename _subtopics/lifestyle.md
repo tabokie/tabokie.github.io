@@ -2,7 +2,7 @@
 layout: blog
 title: Lifestyle
 ---
-<span class="hidden-text"># Created: 2020-12-05; Modified: 2020-12-27</span>
+<span class="hidden-text"># Created: 2020-12-05; Modified: 2021-3-20</span>
 
 On the format: It is an imitation of "Tractatus Logico-Philosophicus" by Wittgenstein, which preserves the logic between statements without an essay-ish form difficult for later amendments.
 
@@ -10,7 +10,7 @@ On the format: It is an imitation of "Tractatus Logico-Philosophicus" by Wittgen
 
 **1.1 Know exactly when to work and what to work on**
 
-1.11 Treat fragmented work that involves large amount of time and produces less obvious results as habit
+1.11 Treat fragmented work that involves large amount of time and produces marginal outcome as habit
 
 1.111 Habits involve minimum decision
 
@@ -22,6 +22,8 @@ On the format: It is an imitation of "Tractatus Logico-Philosophicus" by Wittgen
 
 1.1113 Habits can be associatd with specific time point
 
+1.112 Habits are outside priority system, they can't be scheduled (delayed)
+
 1.12 Treat work that requires quality thinking as project
 
 1.121 Man has limited bandwidth / concentration / production capability
@@ -30,7 +32,7 @@ On the format: It is an imitation of "Tractatus Logico-Philosophicus" by Wittgen
 
 1.1212 Work on one project for at least a week
 
-1.122 [TODO] Prioritize tasks
+1.122 [TODO] Prioritize projects
 
 1.1221 Important over urgent
 
@@ -38,7 +40,11 @@ On the format: It is an imitation of "Tractatus Logico-Philosophicus" by Wittgen
 
 1.123 Be specific
 
-**1.2 Make it easy to start working**
+1.13 Other techniques worth considering
+
+1.131 OKR: Essentially similar to project workflow, constraint on sustained devotion is equivalent to setting a short-term objective, project roadmap is similar to key results.
+
+**1.2 Make it easy to start and stay working**
 
 1.21 Understand "planning" is not "working"
 
@@ -48,17 +54,17 @@ On the format: It is an imitation of "Tractatus Logico-Philosophicus" by Wittgen
 
 1.213 [Analysis paralysis](https://en.m.wikipedia.org/wiki/Analysis_paralysis)
 
-1.22 Environment indicates behaviour
+1.22 Environment encourages certain behaviour
 
 1.221 Forbid yourself from doing unrelated things
 
 1.222 Surround yourself with related things
 
-1.2221 One space for one thing, both physical and cyber spaces
+1.2221 One space for one thing, in both physical and cyber sense
 
 1.23 Begin flexible: calibrate the workload
 
-1.231 Anxiety hurts efficiency, a task composed of several smaller tasks has multipled difficulty
+1.231 Anxiety hurts efficiency, a task composed of several smaller tasks has multiplied difficulty
 
 1.2311 Identify the bottleneck of current task, and reschedule the task
 
@@ -74,13 +80,19 @@ On the format: It is an imitation of "Tractatus Logico-Philosophicus" by Wittgen
 
 1.2411 Quote Scott Adams on procrastination: you are lying down and should get up but don't want to--start by moving just one finger, then your hand, etc.
 
-1.25 Economical procrastination
+1.25 Be your own scheduler, hand-write daily tasks as a FIFO queue
 
-1.251 Keep busy if you really need to stall
+1.251 fact: Humen love checkboxes
 
-1.2511 Reading, which is rarely related to what I’m writing, or hoping to write, helps get started writing ([Susan Sontag Paris Review](https://fs.blog/2013/05/susan-sontag-how-i-write/))
+1.252 Instead of `fork()` right away, push the side misson into queue
 
-1.2512 Do the next task in queue
+1.253 Stay busy if you really can't handle the task at hand
+
+1.2531 This is also called economical procrastination
+
+1.2532 Reading, which is rarely related to what I’m writing, or hoping to write, helps get started writing ([Susan Sontag Paris Review](https://fs.blog/2013/05/susan-sontag-how-i-write/))
+
+1.254 Pass on unfinished tasks and breakdown the ones devised badly
 
 **1.3 Find pleasure in even the dullest work**
 
@@ -148,23 +160,19 @@ On the format: It is an imitation of "Tractatus Logico-Philosophicus" by Wittgen
 
 **1.5 My workflow**
 
-1.51 Daily schedule
+1.51 Work day time table
 
-1.511 8:30AM wake up and leetcode for 30 minutes
+Schedule A: I wake up at 9, go to work at 12:30, office hour from 13:30 to 21:30, get home at 22:30 and go to bed at 1 (hopefully fall asleep at 1:30).
 
-1.512 9:30PM learn French on Sofa for 30 minutes
+Schedule B: I wake up at 8:30, go to work at 9:30, come home at 7, and go to bed at 0:30.
 
-1.513 0:00AM read poem on Bed for 30 minutes
-
-1.514 0:30AM meditate for 30 minutes and go to sleep
+I learn French on sofa at 21:30 for 30 min, and scratch some algorithm at 8:30 for 30 min.
 
 1.52 Tasking
 
 1.521 Monthly role, weekly project
 
-1.522 One browser for private work, one browser for company work, one browser for relaxation
-
-1.523 Keep a worklog
+1.522 Keep a worklog, as a task queue and external memory set
 
 ## 2 Money
 
@@ -190,7 +198,9 @@ On the format: It is an imitation of "Tractatus Logico-Philosophicus" by Wittgen
 
 4.23 Collect old photos from around the world
 
-4.24 Take a week's leave without thinking about time and causality
+4.24 Take a week's leave without thinking about time and consequence
+
+4.25 Sleep at day time, walk at night time (photographer Brassai)
 
 **4.3 Habits**
 
@@ -236,4 +246,8 @@ On the format: It is an imitation of "Tractatus Logico-Philosophicus" by Wittgen
 
 [Structured Procrastination](http://www.structuredprocrastination.com/)
 
-[TODO] [HOWTO: Be more productive](http://www.aaronsw.com/weblog/productivity)
+[A simple and dynamic method for consistent productivity](https://matthewsaltz.wordpress.com/2020/11/24/a-simple-and-dynamic-method-for-consistent-productivity/)
+
+[Setting up personal OKR](https://hackpravj.com/blog/personal-okr-2021-plan/)
+
+[HOWTO: Be more productive](http://www.aaronsw.com/weblog/productivity)
