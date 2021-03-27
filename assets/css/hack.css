@@ -23,8 +23,9 @@
   --global-transition: all 0.5s ease-in-out;
   --hover-transition: all .15s cubic-bezier(.4, 0, 0, 1);
   --border-radius: 5px;
-  --content-width: 62rem;
-  --text-size: 1.05rem;
+  --content-width: 60rem;
+  --text-size: 1.07rem;
+  --line-height: 1.65rem;
 }
 
 @font-face {
@@ -365,6 +366,7 @@ a:hover {
 .hack h6,
 .hack strong {
   font-size: var(--text-size);
+  line-height: var(--line-height);
   font-style: normal;
   font-family: var(--font-family)
 }
