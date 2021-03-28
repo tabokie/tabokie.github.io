@@ -201,7 +201,7 @@ a {
 }
 body {
   font-size: 1rem;
-  line-height: 1.5rem;
+  line-height: var(--line-height);
   margin: 0;
   font-family: var(--font-family);
   word-wrap: break-word;
@@ -366,7 +366,6 @@ a:hover {
 .hack h6,
 .hack strong {
   font-size: var(--text-size);
-  line-height: var(--line-height);
   font-style: normal;
   font-family: var(--font-family)
 }
@@ -374,7 +373,7 @@ a:hover {
 .hack code,
 .hack em,
 .hack strong {
-  line-height: 20px;
+  line-height: var(--line-height);
 }
 .hack blockquote,
 .hack code,
@@ -400,8 +399,8 @@ a:hover {
 .hack ol,
 .hack p,
 .hack ul {
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin-top: var(--line-height);
+  margin-bottom: var(--line-height);
 }
 .hack h1 {
   position: relative;
@@ -472,7 +471,6 @@ a:hover {
 }
 .hack blockquote {
   position: relative;
-  padding-left: 17px;
   padding-left: 2ch;
   overflow: hidden;
 }
@@ -482,7 +480,7 @@ a:hover {
   position: absolute;
   top: 0;
   left: 0;
-  line-height: 20px;
+  /*line-height: 20px;*/
 }
 .hack em:after,
 .hack em:before {
