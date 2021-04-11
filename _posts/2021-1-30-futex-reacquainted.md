@@ -8,7 +8,7 @@ To be fair, the futex (Fast Userspace muTEX) syscall has a rather misleading nam
 
 ## Minimal Useful Subset
 
-Before futex was born, people in need of a proper mutex (waiter actually blocks) have to use heavy kernel objects like file lock ([fcntl](https://man7.org/linux/man-pages/man2/fcntl.2.html)) or [System V semaphore](https://man7.org/linux/man-pages/man7/sysvipc.7.html). Since system calls are toxic to performance, kernel developers then seeked to compress kernel involvement in userspace synchronization by inventing futex.
+Before futex was born, people in need of a proper mutex (waiter actually blocks instead of spinning) have to use heavy kernel objects like file lock ([fcntl](https://man7.org/linux/man-pages/man2/fcntl.2.html)) or [System V semaphore](https://man7.org/linux/man-pages/man7/sysvipc.7.html). Since system calls are toxic to performance, kernel developers then seeked to compress kernel involvement in userspace synchronization by inventing futex.
 
 So essentially this design process is a code refactor that encapsulates the thread blocking functionality into a new lightweight syscall. And such blocking can be easily elided when the lock isn't contended.
 
@@ -27,17 +27,17 @@ Without doubt this is a piece of elegancy. The idea of userspace address as uniq
 static int a = NO_SIGNAL;
 // properly wait for a signal
 let cached_a = atomic_load(&a);
-while (!has_signal(cached_a)) {
+while (cached_a != HAS_SIGNAL) {
   futex_wait(&a, cached_a);
   cached_a = atomic_load(&a);
 }
 // incorrect version
-if (has_signal(atomic_load(&a))) {
-  futex_wait_racy(FUTEX_WAIT, &a);
+if (atomic_load(&a) != HAS_SIGNAL) {
+  futex_wait_racy(&a);
 }
 ```
 
-In the incorrect version, this thread can block indefinitely when the signal has already arrived at `a`. The conditional loop also defends against spurious wakeups (more details later), which further propagates itself to the use of condition variable.
+In the incorrect version, this thread can block indefinitely when the signal has already arrived at `a`. The conditional loop also defends against spurious wakeups, which further propagates itself to the use of condition variable.
 
 ## Technical Details
 
