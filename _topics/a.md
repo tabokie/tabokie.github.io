@@ -1,6 +1,6 @@
 ---
 layout: blog
-title: "*, or the failure of Taxonomy"
+title: "* Uncategorized *"
 childs:
   - /subtopics/lifestyle
   - /subtopics/quote

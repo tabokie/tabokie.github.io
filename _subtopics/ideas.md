@@ -2,26 +2,27 @@
 layout: blog
 title: Ideas
 ---
-<span class="hidden-text"># Created: 2020-12-18; Modified: 2020-12-30</span>
+<span class="hidden-text"># Created: 2020-12-18; Modified: 2021-05-03</span>
 
-## Physical
+## Things
 
-- Dance club with shaking floor
+- Dance club with shaky floor
 - Memoir hall: Comfortable sofa moving through series of photos/paintings/music
 - USB port hidden inside an old brick wall
-- Black-and-White glass (Existing: Upside-down glass)
+- Black-and-White glasses (Existing: Upside-down glasses?)
 - Hand held network latency detector
 - Hand held audio recording gun
 - Cell phone as trackpad
 - Partner working (company must have an even number of employees)
-- Independent polling agancy
+- Independent polling agency
 - Writing training based on word frequency statistics
 - Sound beautifying
-- Disk profile like camera LUT
+- Disk profile like film LUT
+- Piano glove
 
-## Rational
+## Opinion & Observations
 
-- Language dissolves illusion
+- Language dissolves illusion.
 - Is "car washing" scene necessary for narrative, or are they just shooting it because it looks good? That's image exploits.
 - Key hidden under the carpet, a conspiracy shared by creators and theives.
 - How to fake an opinion? Ranking shits.
@@ -45,9 +46,17 @@ title: Ideas
 Students with a bachelor's degree in music can directly enter the computer science master's program. (NIU)
 <br/>
 Playing music prepared them for focusing on the low-level details while holding the big picture in their head. ("The Dream Machine" by Waldrop)
-- Dream is a way to defend territory of visual vortex ([Times](https://time.com/5925206/why-do-we-dream/))
+- Dream is a way to defend territory of visual vortex. ([Times](https://time.com/5925206/why-do-we-dream/))
+- Seductive gay pictures are not NSFW once you're openly out.
+- Cat can act like human, man can act unlike human, thus "Human Index".
+- Dystopian: metro advertisements are "Police in action [live]".
+- Sound vector of words, in specific, numbers: Alpha/Bravo, 动/拐.
+- Robot that edits its own code.
+- Face is the organ of soul.
+- Light years away, pictures of God.
+- 拔牙而死的人
 
-## Sensory
+## Sensation
 
 - 电梯，地铁，站出一种渴望
 - 脚本里黑黢黢地pwd
@@ -57,4 +66,5 @@ Playing music prepared them for focusing on the low-level details while holding 
 - Foggy world like under sea
 - 走过阳光下的光栅，阴影交接的频闪
 - 拍摄走路的视频，边走路边放
-- I like the sound of these words: baloney, encore
+- I like the sounds of these words: baloney, encore, shmug, douchebag
+- I like the names of these movies: "Tie me up, tie me down", "Touch me not", "无因的反叛"
