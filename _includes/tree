@@ -20,11 +20,11 @@
   {% endif %}
     {% if item.childs %}
     <label class="checkbox-container">
-      <input type="checkbox" id="{{cur}}Selected" />
+      <input type="checkbox" />
       <b>[<span class="n-indicator">+</span>]</b>
       - <a href="{{item.url}}">{{item.title}}</a>
       {% if item.childs %}
-        <ul id="showOn{{cur}}" style="margin-top:0px;margin-bottom: 0px;">
+        <ul style="margin-top:0px;margin-bottom: 0px;">
           {% assign tree = "" | split: ',' %}
           {% for child in item.childs %}
             {% for p in site.subtopics %}

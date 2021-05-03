@@ -1,7 +1,27 @@
+/*
+Usage:
+<label class="checkbox-container">
+  <input type="checkbox"/>
+  <b>[<span class="n-indicator">+</span>]</b>
+  some title
+  <div style="margin-top:0px;margin-bottom:0px;">
+    some nested content
+  </div>
+</label>
+*/
+.indicator {
+  color: var(--camouflage-color);
+  display: inline;
+}
+
 input[type=checkbox]:checked ~ b .indicator {
   color: var(--color);
-  opacity: 1;
   text-decoration: none;
+}
+
+.n-indicator {
+  color: var(--color);
+  display: inline;
 }
 
 input[type=checkbox]:checked ~ b .n-indicator {
@@ -9,24 +29,12 @@ input[type=checkbox]:checked ~ b .n-indicator {
   text-decoration: none;
 }
 
-input[type=checkbox]:checked ~ ul {
-  display: inline;
-}
-
-.checkbox-container ul {
+.checkbox-container > ul {
   display: none;
 }
 
-.indicator {
-  color: var(--camouflage-color);
+input[type=checkbox]:checked ~ ul {
   display: inline;
-}
-
-.n-indicator {
-  color: var(--color);
-  opacity: 1;
-  display: inline;
-  /*text-decoration: line-through;*/
 }
 
 .checkbox-container input {
@@ -50,4 +58,14 @@ input[type=checkbox]:checked ~ ul {
 
 .checkbox-container input ~ b:hover {
   background-color: var(--highlight-color);
+}
+
+.foldable {
+  display: none;
+  border-left: 1px solid var(--color);
+  padding-left: 13px;
+}
+
+a:target + div.foldable {
+  display: block;
 }

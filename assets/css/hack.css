@@ -122,6 +122,7 @@ body::-webkit-scrollbar-thumb {
 }
 html {
   font-size: 14px;
+  /*border-top: 3px solid #9D1F24;*/
 }
 .hack {
   background-color:var(--background-color);

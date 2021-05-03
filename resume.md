@@ -8,7 +8,7 @@ override_title: true
 
 ## Skills
 
-- C, C++, Java, Python, Rust, Go, Verilog HDL, SQL, PL/SQL
+- C/C++, Rust, Java, Python, Go, Verilog HDL, SQL, PL/SQL
 - programming on multi-core, GPU, distributed system
 - familiar with database design and physically based rendering
 - Chinese (native), English (fluent), French, Spanish
@@ -21,15 +21,15 @@ override_title: true
 
 **State Key Lab of CAD & CG** (Developer Intern; Jul, 2018 ~ Sept, 2018)
   - reflectance acquisition with deep-learning
-  - real-time physically based renderer on NVIDIA GPU
+  - real-time physically based renderer with NVIDIA OptiX
 
 **Lab for Internet and Security Technology in Zhejiang University** (Research Intern; Oct, 2018 ~ Mar, 2019)
   - durable hardware transactional memory on NVM
-  - stillborn `SpecTM`
+  - prototype `SpecTM`
 
 **PingCAP – TiKV Engine Team** (Developer Intern; Apr, 2019 ~ Nov, 2019)
   - [Titan](https://github.com/tikv/titan): A RocksDB plugin for key-value separation
-  - RPC batching for TiKV
+  - RPC batching for [TiKV](https://github.com/tikv/tikv)
 
 **Ant Financial – OceanBase System Group** (Developer Intern; Jun, 2019 ~ Aug, 2019)
   - TPC-C on Oracle
@@ -39,7 +39,7 @@ override_title: true
   - Fugue: distributed database with decoupled services
   - make it scalable and replicated
 
-**PingCAP – TP-Perf** (Database Engineer; Jul, 2020 ~ now)
+**PingCAP – Cloud-Storage** (Database Engineer; Jul, 2020 till now)
 
 ## Publications
 
