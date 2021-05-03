@@ -21,7 +21,12 @@ I use different languages for writing, please feel free to contact me for possib
 <br />
 <br />
 <br />
+<br />
+<br />
+<br />
+
+-------
 
 \* Pronounced as /təˈbōkē/.
 
-Styling of this site is greatly inspired by Christine Dodrill's personal [blog](https://christine.website/).
+Thanks Christine Dodrill for your inspiring [site](https://christine.website/), and Martin Tournoij for the great [tool](https://www.goatcounter.com/).
