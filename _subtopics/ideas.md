@@ -2,7 +2,7 @@
 layout: blog
 title: Ideas
 ---
-<span class="hidden-text"># Created: 2020-12-18; Modified: 2021-05-03</span>
+<span class="hidden-text"># Created: 2020-12-18; Modified: 2021-05-15</span>
 
 ## Things
 
@@ -55,6 +55,7 @@ Playing music prepared them for focusing on the low-level details while holding 
 - Face is the organ of soul.
 - Light years away, pictures of God.
 - 拔牙而死的人
+- You should write `InRange(lo, val, hi)` instead of `InRange(lo, hi, val)`. ([Semantically ordered arguments should be lexically ordered too](https://quuxplusone.github.io/blog/2021/05/05/its-clamping-time/))
 
 ## Sensation
 

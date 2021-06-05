@@ -67,3 +67,11 @@ We need to feel, as human beings, otherwise we will just consume and consume unt
 思考一种没有动机的技法是毫无乐趣的。
 
 <p align="right">-- Robert Henry, 《艺术精神》</p>
+
+As there is no knowing in advance where a research enterprise may lead and what kind of skills it will require as it unfolds, this process of ‘equipping oneself’ has no predeterminable limits and is bad psychological policy….The great incentive to learning a new skill or supporting discipline is needing to use it.
+
+Too much book learning may crab and confine the imagination, and endless poring over the research of others is sometimes psychologically a research substitute, much as reading romantic fiction may be a substitute for real-life romance….The beginner must read, but intently and choosily and not too much.
+
+The first principle is that you must not fool yourself—and you are the easiest person to fool.
+
+<p align="right">-- Peter Medawar, "Advice to a Young Scientist"</p>
