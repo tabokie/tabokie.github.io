@@ -2,7 +2,7 @@
 layout: blog
 title: Lifestyle
 ---
-<span class="hidden-text"># Created: 2020-12-05; Modified: 2021-3-20</span>
+<span class="hidden-text"># Created: 2020-12-05; Modified: 2021-06-26</span>
 
 On the format: It is an imitation of "Tractatus Logico-Philosophicus" by Wittgenstein, which preserves the logic between statements without an essay-ish form difficult for later amendments.
 
@@ -174,9 +174,25 @@ I learn French on sofa at 21:30 for 30 min, and scratch some algorithm at 8:30 f
 
 1.522 Keep a worklog, as a task queue and external memory set
 
-## 2 Money
+## 2 Quality
+
+**2.1 Logical Thinking**
+
+2.11 Try to disprove your hypotheses rather than prove them right
+
+2.111 Verify your "facts" before deducing on them
 
 ## 3 Social
+
+**3.1 Collaboration**
+
+3.11 Willingly and bluntly apologize for your mistakes
+
+3.12 Words render fact, and eventually become fact
+
+3.121 Avoid describing an already bad situation negatively
+
+3.122 Criticize with caution
 
 ## 4 Have Fun Living
 

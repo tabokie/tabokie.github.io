@@ -2,7 +2,7 @@
 layout: blog
 title: Ideas
 ---
-<span class="hidden-text"># Created: 2020-12-18; Modified: 2021-05-15</span>
+<span class="hidden-text"># Created: 2020-12-18; Modified: 2021-06-26</span>
 
 ## Things
 
@@ -19,6 +19,12 @@ title: Ideas
 - Sound beautifying
 - Disk profile like film LUT
 - Piano glove
+- Subtitle search
+<br/>
+This has come true: [https://www.playphrase.me/#/search?q=know+what+i'm+talking+about](https://www.playphrase.me/#/search?q=know+what+i'm+talking+about)
+<br/>
+- A surprise episode after the fake finale
+- Mobile as model viewer, AR with no camera
 
 ## Opinion & Observations
 
@@ -56,6 +62,7 @@ Playing music prepared them for focusing on the low-level details while holding 
 - Light years away, pictures of God.
 - 拔牙而死的人
 - You should write `InRange(lo, val, hi)` instead of `InRange(lo, hi, val)`. ([Semantically ordered arguments should be lexically ordered too](https://quuxplusone.github.io/blog/2021/05/05/its-clamping-time/))
+- Cash has become more vulnerable than digital number
 
 ## Sensation
 

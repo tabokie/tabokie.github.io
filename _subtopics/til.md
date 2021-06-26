@@ -2,7 +2,7 @@
 layout: blog
 title: Today I Learned
 ---
-<span class="hidden-text"># Created: 2020-12-30; Modified: 2020-12-30</span>
+<span class="hidden-text"># Created: 2020-12-30; Modified: 2021-06-26</span>
 
 {% assign uid = 0 %}
 - Linux
@@ -59,10 +59,28 @@ void initialize(size_t n, size_t m, double A[n][m]);
 ```
 
 </div></div>
-{% include folder title='Forward Declaration in C++' %}
+
+{% include folder title='Forward Declaration' %}
 
 Pros: hide implementations (declare `XXImpl`), circular dependence, faster compilation
 
 Cons: can't use alias, potential inheritance is elided, delete an incomplete class is UB
+
+</div></div>
+
+{% include folder title='Evaluation Interleaving' %}
+
+`f(std::shared_ptr(new A()), g())` is risky if `g()` can be interleaved between object allocation and `shared_ptr` initialization.
+
+This is explicitly prohibited after C++17 ([StackOverflow](https://stackoverflow.com/questions/38501587/what-are-the-evaluation-order-guarantees-introduced-by-c17/46472497#46472497))
+
+</div></div>
+
+- Rust
+
+{% include folder title='Tiny details' %}
+
+- `_` variables are dropped immediately
+- Overflow check is disabled in release build
 
 </div></div>
