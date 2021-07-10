@@ -1,11 +1,11 @@
 ---
 layout: blog
-title: Good Designs
+title: Visual Designs
 ---
 <span class="hidden-text"># Created: 2021-06-06; Modified: 2021-06-26</span>
 
 
-- [oxide](https://oxide.computer/)
+- [oxide](https://oxide.computer/): ASCII animation
 
 <p style="background-color:#0B1418; color:#FFFFFF;">
 color palette:
@@ -14,5 +14,3 @@ color palette:
   <span style="color:#4969F6">▇</span>
   <span style="color:#F5CF65">▇</span>
 </p>
-
-Highlights: ASCII Animation

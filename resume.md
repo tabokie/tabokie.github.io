@@ -41,10 +41,6 @@ override_title: true
 
 **PingCAP – Cloud-Storage** (Database Engineer; Jul, 2020 till now)
 
-## Publications
-
-(Pending) Simplifying replication for distributed, transactional databases [Liang Jeff Chen, Xinye Tao, Bin Yan, Qianxi Zhang, Lintao Zhang]
-
 ## Education
 
 **Zhejiang University - Computer Science** (Bachelor; 2016 ~ 2020)

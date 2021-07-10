@@ -4,11 +4,11 @@ title: Readings
 ---
 <span class="hidden-text"># Created: 2020-02-07; Modified: 2020-06-24</span>
 
-Buffer pool for daily digest (paper and blog).
+Paper and blog, technical reads.
 
 ## 21-06-17
 
-- Measuring and Optimizing Tail Latency, 2017.
+- Measuring and Optimizing Tail Latency, 2017. ([youtube](https://www.youtube.com/watch?v=_Zoa3xkzgFk))
 
 Noise, queueing, work.
 

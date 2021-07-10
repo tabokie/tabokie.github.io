@@ -267,3 +267,20 @@ I learn French on sofa at 21:30 for 30 min, and scratch some algorithm at 8:30 f
 [Setting up personal OKR](https://hackpravj.com/blog/personal-okr-2021-plan/)
 
 [HOWTO: Be more productive](http://www.aaronsw.com/weblog/productivity)
+
+[TODO]
+[68 Bits of Unsolicited Advice](https://kk.org/thetechnium/68-bits-of-unsolicited-advice/) ([HN](https://news.ycombinator.com/item?id=23015182))
+
+[TODO]
+[99 Additional Bits of Unsolicited Advice](https://kk.org/thetechnium/99-additional-bits-of-unsolicited-advice/)
+
+[TODO]
+[How to Work Hard](http://paulgraham.com/hwh.html) ([HN](https://news.ycombinator.com/item?id=27675603))
+
+[TODO]
+[Incremental note-taking](https://thesephist.com/posts/inc/) ([HN](https://news.ycombinator.com/item?id=27667538))
+
+[TODO]
+[Using Paper for Everyday Tasks](https://christine.website/blog/gtd-on-paper-2021-06-13)
+[TODO]
+[The problem with 'follow your dream'](https://science.sciencemag.org/content/372/6544/874) ([HN](https://news.ycombinator.com/item?id=27245529))

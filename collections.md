@@ -3,10 +3,13 @@ layout: blog
 title: Collection
 ---
 
+Hoarder's delight~~
+
+- [Ideas](/subtopics/ideas.html)
 - [Lifestyle](/subtopics/lifestyle.html)
 - [Quotations](/subtopics/quote.html)
+- [Poem (Chinese)](/subtopics/poem-cn.html)
 - [Today I Learned](/subtopics/til.html)
-- [Ideas](/subtopics/ideas.html)
-- [Good Designs](/subtopics/design.html)
+- [Visual Designs](/subtopics/design.html)
 - [Readings](/subtopics/reading.html)
 - [Tools](/subtopics/tools.html)

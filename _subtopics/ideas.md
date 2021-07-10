@@ -2,31 +2,31 @@
 layout: blog
 title: Ideas
 ---
-<span class="hidden-text"># Created: 2020-12-18; Modified: 2021-06-26</span>
+<span class="hidden-text"># Created: 2020-12-18; Modified: 2021-07-10</span>
 
-## Things
+## Thing
 
-- Dance club with shaky floor
-- Memoir hall: Comfortable sofa moving through series of photos/paintings/music
-- USB port hidden inside an old brick wall
-- Black-and-White glasses (Existing: Upside-down glasses?)
-- Hand held network latency detector
-- Hand held audio recording gun
-- Cell phone as trackpad
-- Partner working (company must have an even number of employees)
-- Independent polling agency
-- Writing training based on word frequency statistics
-- Sound beautifying
-- Disk profile like film LUT
-- Piano glove
-- Subtitle search
-<br/>
-This has come true: [https://www.playphrase.me/#/search?q=know+what+i'm+talking+about](https://www.playphrase.me/#/search?q=know+what+i'm+talking+about)
-<br/>
-- A surprise episode after the fake finale
-- Mobile as model viewer, AR with no camera
+- dance club + shaky floor
+- hidden USB port on a random old brick wall
+- black-and-white glasses [related: upside-down glasses]
+- handgun => detector of {network latency, ambient sound}
+- cell phone => laptop trackpad
+- pair working (company must have an even number of employees)
+- independent polling agency [happening: online questionaire]
+- realtime sound beautifying [related: video beautifying]
+- disk profile like film LUT
+- glove + piano [related: virtual drum [aerodrums](https://aerodrums.com/home/)]
+- subtitle search for efficient video mashup [happening: [playphrase](https://www.playphrase.me/#/search?q=know+what+i'm+talking+about)]
+- a surprise episode after the fake finale
+- mobile phone as model viewer, AR doesn't necessarily equal vision, gravity is reality too
 
-## Opinion & Observations
+## Do It Yourself
+
+- multiple zoom clients to create echo synthesizer
+- sensory deprivations
+- make your own sound effect
+
+## Opinion & Observation
 
 - Language dissolves illusion.
 - Is "car washing" scene necessary for narrative, or are they just shooting it because it looks good? That's image exploits.
@@ -43,7 +43,7 @@ This has come true: [https://www.playphrase.me/#/search?q=know+what+i'm+talking+
 - Art is against taxonomy, in its pursuit for "uniqueness"
 - In silent film they use higher frame rate to make people look funny, "fast pacer has no dignity".
 - Data to engineer is like gravity to architect.
-- Game / movie comsuption is an unique category in its mixture of experience and possession.
+- Game / movie consumption is an unique category in its mixture of experience and possession.
 - Computer science is a subject with no respect to history, a subject without secret.
 - Any life procedure costs.
 - 画衰败梅枝，现代画假阳具，咏物志的变迁
@@ -76,3 +76,8 @@ Playing music prepared them for focusing on the low-level details while holding 
 - 拍摄走路的视频，边走路边放
 - I like the sounds of these words: baloney, encore, shmug, douchebag
 - I like the names of these movies: "Tie me up, tie me down", "Touch me not", "无因的反叛"
+
+## Not Even Good
+
+- memoir hall: comfortable sofa moving through series of photos/paintings/music
+- train writing ability by evaluating vocabulary, word frequency
