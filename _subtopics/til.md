@@ -84,3 +84,33 @@ This is explicitly prohibited after C++17 ([StackOverflow](https://stackoverflow
 - Overflow check is disabled in release build
 
 </div></div>
+
+- Regex
+
+{% include folder title='Avoid self-reference' %}
+
+I have a process table and I want to grep it for the phrase "banana":
+
+```
+ps auxww | grep banana
+
+root 87 Jun21 0:26.78 /System/Library/CoreServices/FruitProcessor --core=banana
+
+mikec 456 450PM 0:00.00 grep banana
+```
+
+Argh! It also greps for the grep for banana! Annoying!
+
+Well, I'm sure there's pgrep or some clever thing, but my coworker showed me this and it took me a few minutes to realize how it works:
+
+```
+ps auxww | grep [b]anana
+
+root 87 Jun21 0:26.78 /System/Library/CoreServices/FruitProcessor --core=banana
+```
+
+Doc Brown spoke to me: "You're just not thinking fourth dimensionally!" Like Marty, I have a real problem with that. But don't you see: [b]anana matches banana but it doesn't match 'grep [b]anana' as a raw string. And so I get only the process I wanted!
+
+([Hacker News](https://news.ycombinator.com/item?id=27774584))
+
+</div></div>

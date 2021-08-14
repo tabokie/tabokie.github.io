@@ -18,4 +18,4 @@ title: Tools
 
 - [Stylish](https://en.wikipedia.org/wiki/Stylish): A user style manager that can change the appearance of web pages in a user's browser without changing their content by including user-supplied CSS style sheets with those supplied by the web site itself
 
-- [magic-wormhole](https://github.com/magic-wormhole/magic-wormhole)/[croc](https://github.com/schollz/croc): Get things from one computer to another, safely.
+- [magic-wormhole](https://github.com/magic-wormhole/magic-wormhole)/[croc](https://github.com/schollz/croc): Get things from one computer to another, safely

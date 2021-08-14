@@ -4,7 +4,7 @@ title: Ideas
 ---
 <span class="hidden-text"># Created: 2020-12-18; Modified: 2021-07-10</span>
 
-## Thing
+## New Thing
 
 - dance club + shaky floor
 - hidden USB port on a random old brick wall
@@ -19,12 +19,14 @@ title: Ideas
 - subtitle search for efficient video mashup [happening: [playphrase](https://www.playphrase.me/#/search?q=know+what+i'm+talking+about)]
 - a surprise episode after the fake finale
 - mobile phone as model viewer, AR doesn't necessarily equal vision, gravity is reality too
+- use eye tracking to interrogate suspect
 
 ## Do It Yourself
 
 - multiple zoom clients to create echo synthesizer
 - sensory deprivations
 - make your own sound effect
+- side paint keycaps
 
 ## Opinion & Observation
 
@@ -63,6 +65,9 @@ Playing music prepared them for focusing on the low-level details while holding 
 - 拔牙而死的人
 - You should write `InRange(lo, val, hi)` instead of `InRange(lo, hi, val)`. ([Semantically ordered arguments should be lexically ordered too](https://quuxplusone.github.io/blog/2021/05/05/its-clamping-time/))
 - Cash has become more vulnerable than digital number
+- A weird hypothesis is that a dream might not even be a story until you wake up—like a wave function collapse[1] of abstract brain activity. Freud wrote about a man being jolted awake by his headboard falling on his neck the very moment he had been guillotined in a dream, and I think most of us have examples.
+- 搜索 -> sōu suǒ -> ou uo
+- electric toothbrush is similar to vocoder/talkbox
 
 ## Sensation
 

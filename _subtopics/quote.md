@@ -2,7 +2,7 @@
 layout: blog
 title: Quotations
 ---
-<span class="hidden-text"># Created: 2020-12-05; Modified: 2021-05-03</span>
+<span class="hidden-text"># Created: 2020-12-05; Modified: 2021-08-14</span>
 
 The evidence I shall give will be the truth, the whole truth, and nothing but the truth.
 
@@ -58,11 +58,35 @@ We need to feel, as human beings, otherwise we will just consume and consume unt
 
 <p align="right">-- Simon Amstell, "Numb" (Talk Show)</p>
 
+不用担心你的原创性。即使你想除也除不掉。无论你或他人怎么做，它都粘在你身上，将你的好坏展露无遗。
+
+他学素描不是为了以后成为艺术家时能派上用场，他没时间做这个，从一开始他就是个艺术家，忙于找到线条和形式去表达大自然赋予他的欢乐和情感。
+
+他们可能数百次地经过自己的绘画对象，感受到了它，很喜欢它，却对自己缺乏信心，没有对自己的感受做出判断。
+
+学习技法意味着创造技法、发明技法。同样的技法绝不能再用，每次的技法都要令人耳目一新。
+
+他应该一开始就是大师，对现有的要精通，哪怕他有的东西很少。一开始就对现有的精通，这才可能在数年的学习之后在许多方面精通。
+
+当一个人全神贯注于他所谈论的事情时，他就能以一种对他来说不寻常的熟练程度来掌握这种语言，而他也正是在这些时候学会了语言。
+
+去看看那幅画，我知道你会喜欢的。戴上一副假胡子，这样你就不会被打扰了。
+
 在某种程度上，人类的艺术创作不再需要让人们告诉他们说，他们应该做什么。他们可能需要被告知，他们会得到报酬，但这不同于告诉他们应该做什么。
 
 对某个痕迹的沉思静赏；一幅画，听到音乐，看到一个优雅的姿态，这都可能让精神激昂起来。这些是生活更美好、运行更充分的痕迹。我们喜欢它们、珍惜它们，因为我们也想如此生活，而他们激励了生活。这就是一件“艺术品”的价值。这些痕迹是不可避免的。生活在物中显现。
 
 你最终能成功表达的只能是你实际已经设想到的东西。
+
+他们当时对自己感兴趣，现在我们也对他们感兴趣。
+
+他们（印第安人）的艺术是个人生活的一部分。我们把天赋只分配给一部分人，而让其他人都去从事世俗的事务。
+
+把所有的时间都用来欣赏艺术并不可取。艺术应驱使你前进，它应该是生活的动力，艺术对欣赏者最大的价值在于它能激发个人的行动。
+
+每个变化都必须是重要的，必须非常重要，不能有任何的含糊其词。
+
+我建议你用钱去买画，这便意味着你对画家的认可；你自己选择要买什么，承担自己的错误，从自己的错误中吸取教训，并把买的画挂在你的永久收藏中来代表你的判断。
 
 思考一种没有动机的技法是毫无乐趣的。
 
@@ -75,3 +99,11 @@ Too much book learning may crab and confine the imagination, and endless poring 
 The first principle is that you must not fool yourself—and you are the easiest person to fool.
 
 <p align="right">-- Peter Medawar, "Advice to a Young Scientist"</p>
+
+The urge for destruction is also a creative urge.
+
+<p align="right">-- Mikhail Bakunin</p>
+
+Ummon: "Science tells us that giraffes evolved long necks to eat leaves at the top of trees. What it doesn’t tell us is why no other animals evolved long necks."
+
+<p align="right">-- Dan Simmons, "Hyperion"</p>

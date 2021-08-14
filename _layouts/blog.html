@@ -56,7 +56,7 @@
       <span class="hidden-text"># {{page.category}}, {{ prefix }}</span>
       {% endif %}
       {{content}}
-      {% if page.childs %}
+      {% if page.childs and page.childs.size > 0 %}
         <hr></hr>
         <ul>
         Subtopics:
