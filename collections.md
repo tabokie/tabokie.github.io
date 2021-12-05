@@ -5,11 +5,11 @@ title: Collection
 
 Hoarder's delight~~
 
-- [Ideas](/subtopics/ideas.html)
-- [Lifestyle](/subtopics/lifestyle.html)
-- [Quotations](/subtopics/quote.html)
-- [诗](/subtopics/poem-cn.html)
-- [Today I Learned](/subtopics/til.html)
-- [Visual Designs](/subtopics/design.html)
-- [Readings](/subtopics/reading.html)
-- [Tools](/subtopics/tools.html)
+- [Ideas](/subtopics/collections/ideas.html)
+- [Lifestyle](/subtopics/collections/lifestyle.html)
+- [Quotations](/subtopics/collections/quote.html)
+- [诗](/subtopics/collections/poem-cn.html)
+- [Today I Learned](/subtopics/collections/til.html)
+- [Visual Designs](/subtopics/collections/design.html)
+- [Meditations under a Waterfall](/subtopics/collections/reading.html)
+- [Tools](/subtopics/collections/tools.html)

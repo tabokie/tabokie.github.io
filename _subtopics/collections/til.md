@@ -50,6 +50,14 @@ call matchadd("Group", "foo")
 
 </div></div>
 
+{% include folder title='Serve a web page' %}
+
+```
+python2 -m SimpleHTTPServer <port>
+python3 -m http.server
+```
+</div></div>
+
 - C/C++
 
 {% include folder title='C supports Variable Length Array (VLA)' %}

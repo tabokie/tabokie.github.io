@@ -2,9 +2,9 @@
 layout: blog
 title: Lifestyle
 ---
-<span class="hidden-text"># Created: 2020-12-05; Modified: 2021-06-26</span>
+<span class="hidden-text"># Created: 2020-12-05; Modified: 2021-08-29</span>
 
-On the format: It is an imitation of "Tractatus Logico-Philosophicus" by Wittgenstein, which preserves the logic between statements without an essay-ish form difficult for later amendments.
+On the format: It is an imitation of "Tractatus Logico-Philosophicus" by Wittgenstein, which preserves the logic between statements without becomming too essay-ish for easy amendments.
 
 ## 1 Efficiency
 
@@ -182,6 +182,14 @@ I learn French on sofa at 21:30 for 30 min, and scratch some algorithm at 8:30 f
 
 2.111 Verify your "facts" before deducing on them
 
+**2.2 Reading**
+
+write notes on little notepads and leave the note in the book as bookmarks
+
+feyman, concept
+
+**2.3 Health**
+
 ## 3 Social
 
 **3.1 Collaboration**
@@ -194,6 +202,14 @@ I learn French on sofa at 21:30 for 30 min, and scratch some algorithm at 8:30 f
 
 3.122 Criticize with caution
 
+**3.2 Friendship**
+
+3.21 Self-disclosure ([blog](https://happyturtlethings.net/how-to-make-a-friend-fast/))
+
+3.22 Establish a routine, regularly encounter the same (not unlikable) people in a relaxed setting
+
+3.23 Be a friend to yourself, Make the first move
+
 ## 4 Have Fun Living
 
 **4.1 Breach boundaries**
@@ -205,6 +221,8 @@ I learn French on sofa at 21:30 for 30 min, and scratch some algorithm at 8:30 f
 4.13 Cook/fry/bake food you would usually eat raw, and vice versa
 
 4.14 Don't wear shoes outside
+
+4.15 Live on a boat (松本哉, "世界大笨蛋反叛手册")
 
 **4.2 See more**
 
@@ -282,5 +300,12 @@ I learn French on sofa at 21:30 for 30 min, and scratch some algorithm at 8:30 f
 
 [TODO]
 [Using Paper for Everyday Tasks](https://christine.website/blog/gtd-on-paper-2021-06-13)
+
 [TODO]
 [The problem with 'follow your dream'](https://science.sciencemag.org/content/372/6544/874) ([HN](https://news.ycombinator.com/item?id=27245529))
+
+[TODO]
+[How to gain more from your reading](https://news.ycombinator.com/item?id=27901053)
+
+[TODO]
+[How to Remember What You Read](https://news.ycombinator.com/item?id=28254378)

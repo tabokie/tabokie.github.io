@@ -9,7 +9,7 @@ title: Ideas
 - dance club + shaky floor
 - hidden USB port on a random old brick wall
 - black-and-white glasses [related: upside-down glasses]
-- handgun => detector of {network latency, ambient sound}
+- handgun => detector of {network latency, ambient sound} [happening: [WiFiman Signal Tracking](https://blog.ui.com/2021/08/19/wifiman-introduces-enhanced-signal-tracking-features/)]
 - cell phone => laptop trackpad
 - pair working (company must have an even number of employees)
 - independent polling agency [happening: online questionaire]
