@@ -53,7 +53,7 @@
       {% if page.category %}
       {% assign date = page.date | split: ' ' %}
       {% assign prefix = date[0] %}
-      <span class="hidden-text"># {{page.category}}, {{ prefix }}</span>
+      <p class="hidden-text"># {{page.category}}, {{ prefix }}</p>
       {% endif %}
       {{content}}
       {% if page.childs and page.childs.size > 0 %}
