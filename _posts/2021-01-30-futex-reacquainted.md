@@ -21,7 +21,7 @@ int futex_wake(int *addr);
 int futex_wait(int *addr, int val);
 ```
 
-Without doubt this is a piece of elegancy. The idea of userspace address as unique identifier isn't rare in nowaday system code (see boost's [thread local pointer](https://github.com/boostorg/thread/blob/409c98f8b745e72bc326e93bfaf8a353d94a69b0/include/boost/thread/tss.hpp)). What's brilliant is, futex further incorporates the CAS-like (compare and swap) semantics into this address -- the thread is blocked when `*addr` is indeed `val`. This turns out to be essential to enforce the atomicity of user\~kernel transition:
+Without doubt this is a piece of elegance. The idea of using userspace address as an unique identifier isn't rare in nowaday system code (see boost's [thread local pointer](https://github.com/boostorg/thread/blob/409c98f8b745e72bc326e93bfaf8a353d94a69b0/include/boost/thread/tss.hpp)). What's brilliant is, futex further incorporates the CAS-like (compare and swap) semantics into this address -- the thread is blocked when `*addr` is indeed `val`. This turns out to be essential to enforce the atomicity of user\~kernel transition:
 
 ```rust
 static int a = NO_SIGNAL;
@@ -409,7 +409,7 @@ The path of the private futex - Sebastian A. Siewior, 2016 ([slides.pdf](https:/
 
 [Mutexes and Condition Variables using Futexes](http://locklessinc.com/articles/mutex_cv_futex/) - Lockless Inc.
 
-[Condition variable with futex](https://www.remlab.net/op/futex-condvar.shtml)
+[Condition variable with futex](https://www.remlab.net/op/futex-condvar.shtml) - Rémi Denis-Courmont, 2016
 
 <!---
 > Joe Duffy's "Concurrent Programming On Windows" mentions this (P311-312, P598). This bit is interesting:

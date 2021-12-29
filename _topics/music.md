@@ -21,6 +21,7 @@ Why does a melody sounds good? And what can we learn to compose more?
 
 ### Resources
 
+- [Learning Music - Ableton](https://learningmusic.ableton.com/index.html)(⭐⭐⭐⭐)
 - [Music Theory for Musicians and Normal People](https://tobyrush.com/theorypages/index.html)(⭐⭐⭐⭐)
 - [Learn Piano By Chords](http://www.pianobychords.com/)(⭐⭐⭐)
 - [Music Theory for Nerds](https://eev.ee/blog/2016/09/15/music-theory-for-nerds/)(⭐⭐⭐)
