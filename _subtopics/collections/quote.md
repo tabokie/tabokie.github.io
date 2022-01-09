@@ -2,6 +2,9 @@
 layout: blog
 title: Quotations
 ---
+
+https://next.itellyou.cn/Original/
+
 <span class="hidden-text"># Created: 2020-12-05; Modified: 2021-08-29</span>
 
 The evidence I shall give will be the truth, the whole truth, and nothing but the truth.
