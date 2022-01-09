@@ -1,5 +1,37 @@
 @charset "utf-8";
 :root {
+  --color: #101518;
+  --highlight-color: #890900;
+  /*#ff4646 red*/
+  /*#f3bf1e yellow*
+  /*#ff2e88 pink*/
+  /*#cb1104 thick red*/
+  /*#eb6b56 pale red*/
+  
+  --camouflage-color: #92ABD4;
+  /*#D3E1E8;*/
+  --background-color: #ABC4ED;
+  /*#101518 #0a0f12 blue*/
+  /*#282828 gray*/
+  --emphsis-color: #1C355E;
+  /*#98971a dirt yellow*/
+  /*#758eb7 light blue*/
+  --emphsis-link-color: #123693;
+  /*6f5f90*/
+  /* cb1104 + 101518 / 2*/
+  --selection-color: #D17772;
+
+  --font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
+    Bitstream Vera Sans Mono, 'ChsFont';
+  --global-transition: all 0.5s ease-in-out;
+  --hover-transition: all .15s cubic-bezier(.4, 0, 0, 1);
+  --border-radius: 5px;
+  --content-width: 60rem;
+  --text-size: 1.07rem;
+  --line-height: 1.65rem;
+}
+
+.dark {
   --color: #ebdbb2;
   --highlight-color: #eb6b56;
   /*#ff4646 red*/
@@ -7,8 +39,9 @@
   /*#ff2e88 pink*/
   /*#cb1104 thick red*/
   /*#eb6b56 pale red*/
-  --camouflage-color: #323436;
-  --background-color: #101518;
+  
+  --camouflage-color: #444648;  /* 7% lighter than #323436 */
+  --background-color: #22272A;  /* 7% lighter than #101518 */
   /*#101518 #0a0f12 blue*/
   /*#282828 gray*/
   --emphsis-color: #758eb7;
@@ -18,14 +51,6 @@
   /*6f5f90*/
   /* cb1104 + 101518 / 2*/
   --selection-color: #6D130E;
-  --font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-    Bitstream Vera Sans Mono, 'ChsFont';
-  --global-transition: all 0.5s ease-in-out;
-  --hover-transition: all .15s cubic-bezier(.4, 0, 0, 1);
-  --border-radius: 5px;
-  --content-width: 60rem;
-  --text-size: 1.07rem;
-  --line-height: 1.65rem;
 }
 
 @font-face {
