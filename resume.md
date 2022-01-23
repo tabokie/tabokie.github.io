@@ -1,6 +1,6 @@
 ---
 layout: blog
-title: Resume
+title: Résumé
 override_title: true
 ---
 
