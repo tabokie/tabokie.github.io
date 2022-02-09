@@ -8,18 +8,24 @@
   /*#cb1104 thick red*/
   /*#eb6b56 pale red*/
   
-  --camouflage-color: #A1BAE3;
+  /*#A1BAE3;*/
+  --camouflage-color: #ddd;
   /*#D3E1E8;*/
-  --background-color: #D1EAFF;
+  /*#D1EAFF;*/
+  /*#E0F9FF;*/
+  --background-color: #fff;
   /*#101518 #0a0f12 blue*/
   /*#282828 gray*/
-  --emphsis-color: #1C355E;
+  /*#1C355E;*/
+  --emphsis-color: #101518;
   /*#98971a dirt yellow*/
   /*#758eb7 light blue*/
-  --emphsis-link-color: #123693;
+  /*#123693;*/
+  --emphsis-link-color: #101518;
   /*6f5f90*/
   /* cb1104 + 101518 / 2*/
-  --selection-color: #D17772;
+  /*D17772*/
+  --selection-color: #890900;
 
   --font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
     Bitstream Vera Sans Mono, 'ChsFont';
@@ -234,6 +240,7 @@ body {
 }
 
 ::selection {
+  color: #fff;
   background: var(--selection-color);
 }
 h1,
@@ -512,6 +519,9 @@ a:hover {
 .hack em:before {
   content: "*";
   display: inline;
+}
+.hack em {
+  font-style: italic;
 }
 .hack pre code:after,
 .hack pre code:before {
