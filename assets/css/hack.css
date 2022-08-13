@@ -26,9 +26,8 @@
   /* cb1104 + 101518 / 2*/
   /*D17772*/
   --selection-color: #890900;
-
-  --font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-    Bitstream Vera Sans Mono, 'ChsFont';
+  /*Menlo, Consolas, Monaco, Liberation Mono, Lucida Console, monospace*/
+  --font-family: Menlo, Lucida Console, Consolas, 'CNFont';
   --global-transition: all 0.5s ease-in-out;
   --hover-transition: all .15s cubic-bezier(.4, 0, 0, 1);
   --border-radius: 5px;
@@ -60,14 +59,10 @@
 }
 
 @font-face {
-  font-family: 'ChsFont';
+  font-family: 'CNFont';
   src:
     local('DengXian'),
-    local('Microsoft JhengHei'),
-    local('Hiragino Sans GB'),
-    local('PingFang'),
-    local('Microsoft Yahei'),
-    local('Droid Sans Fallback');
+    local('Hiragino Sans GB');
 }
 
 /* cyrillic-ext */
@@ -230,6 +225,7 @@ a {
 * {
   box-sizing: border-box;
   text-rendering: geometricPrecision;
+  scrollbar-gutter: stable;
 }
 body {
   font-size: 1rem;
