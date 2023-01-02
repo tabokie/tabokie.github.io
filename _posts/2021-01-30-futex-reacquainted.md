@@ -44,9 +44,10 @@ In the incorrect version, this thread can block indefinitely when the signal has
 <div class="ascii-art">
        ...
     ----------
-        |          tid1       tid2       tid3
-    +--------+      |          |          |
-    |spinlock|  ~~~~~~~~~  ---------  ~~~~~~~~~
+        |
+    +--------+     tid1       tid2       tid3
+    |spinlock|      |          |          |
+    |--------|  ~~~~~~~~~  ---------  ~~~~~~~~~
     |   key  +->| addr1 |->| addr2 |->| addr1 |->...
     +--------+  ~~~~~~~~~  ---------  ~~~~~~~~~
         | 
@@ -87,9 +88,9 @@ When problems are defined, solutions aren't that far either. Below is a list of 
 
 6. Use private hash table for each process ([rfc](https://lore.kernel.org/lkml/49C4D5A0.5020106@cosmosbay.com/t/))
 
-## Romance Between Futex & Condition Variable
+## Inside Condition Variable
 
-I was going to take a closer look at how pthread(NPTL) implements condition variable with futexes, and unveil some of the mysteries that prompted me to write this post in the first place.
+I was going to take a closer look at how pthread (NPTL) implements condition variable with futexes, and unveil some of the mysteries that prompted me to write this post in the first place.
 
 To look "closer", I skimmed through the commits of NPTL's condvar from 2002 to 2016. Even though during this period the code skeleton is relatively stable, the minor details kept changing. Plus the commit messages being chaotic, it's almost impossible to reason those changes.
 
