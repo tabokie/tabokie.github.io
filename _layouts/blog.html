@@ -15,27 +15,25 @@
     <meta name="theme-color" content="#ffffff">
 
     <title>{{page.title}}</title>
+
     <style>
-     .main {
-       padding: 20px 10px;
-     }
-
-     .hack h1 {
-       padding-top: 0;
-     }
-
-     footer.footer {
-       border-top: 1px solid #ccc;
-       margin-top: 80px;
-       margin-top: 5rem;
-       padding: 48px 0;
-       padding: 3rem 0;
-     }
-
-     img {
-       max-width: 100%;
-       padding: 1em;
-     }
+      .main {
+        padding: 20px 10px;
+      }
+      .hack h1 {
+        padding-top: 0;
+      }
+      footer.footer {
+        border-top: 1px solid #ccc;
+        margin-top: 80px;
+        margin-top: 5rem;
+        padding: 48px 0;
+        padding: 3rem 0;
+      }
+      img {
+        max-width: 100%;
+        padding: 1em;
+      }
     </style>
     {% seo %}
   </head>
@@ -46,9 +44,10 @@
       {% include navbar.html %}
 
       <div class="snowframe">
-      {% unless page.override_title %}
+      {% unless page.hide_title_in_page %}
       <h1>{{page.title}}</h1>
       {% endunless %}
+
       {% if page.category %}
       {% assign date = page.date | split: ' ' %}
       {% assign prefix = date[0] %}

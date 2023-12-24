@@ -1,17 +1,22 @@
 ---
-layout: sidebar
-title: Tabokie's Page
-avatar: /assets/favicon/android-chrome-512x512.png
-avatar_old: /assets/img/vampire.png
+layout: blog
+title: Xinye Tao
+hide_title_in_page: true
+# avatar: /assets/favicon/android-chrome-512x512.png
+# avatar_old: /assets/img/vampire.png
 ---
 
-I'm Xinye Tao, aka Tabokie\*.
+<br />
+Hi and welcome, I'm Xinye Tao.
 
-I code for a living, specialized in System and Graphics, currently employed at [PingCAP](https://en.pingcap.com).
+I program for large-scale data systems. I love them for their physicality -- the hardware as flesh and data as blood.
 
-I'm a lifelong learner. This site exists to accompany me through the journey ahead.
+I love many other things. That includes music, photography and writing.
 
-I use different languages for writing, please feel free to contact me for possible translation.
+I believe in a future where work is not a mean to an end, but simply an “action”, as Hannah Arendt put it.
+
+
+You can reach me at [xy.tao@outlook.com](mailto:xy.tao@outlook.com). I'm also available on [GitHub](https://github.com/tabokie), [Douban](https://www.douban.com/people/91872582).
 
 
 <br />
@@ -24,9 +29,14 @@ I use different languages for writing, please feel free to contact me for possib
 <br />
 <br />
 <br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
 
--------
-
-\* Pronounced as /təˈbōkē/.
-
-Thanks Christine Dodrill for your inspiring [site](https://christine.website/), and Martin Tournoij for the great [tool](https://www.goatcounter.com/).

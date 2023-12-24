@@ -3,6 +3,8 @@ collections:
     output: true
   subtopics:
     output: true
+  lists:
+    output: true
 plugins:
   - jekyll-seo-tag
   - jekyll-sitemap

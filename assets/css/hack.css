@@ -202,10 +202,10 @@ html {
 }
 
 a {
-  transition: var(--hover-transition);
   -webkit-transition: var(--hover-transition);
   -moz-transition: var(--hover-transition);
   -o-transition: var(--hover-transition);
+  transition: var(--hover-transition);
   /*transition: all .15s cubic-bezier(.4, 0, 0, 1);*/
   /*transition: all .2s cubic-bezier(1, 0, 0, 1);*/
   /*transition:all 1.3s cubic-bezier(0,.5,0,1) 0s*/

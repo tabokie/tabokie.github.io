@@ -1,0 +1,136 @@
+/* source: https://www.zx2c4.com/projects/linux-rng-5.17-5.18 */
+@font-face{
+    font-family:"LM Roman";
+    font-weight:700;
+    font-style:normal;
+    font-display:swap;
+    src:url(/fonts/lmroman10-bold.woff2) format("woff2"),url(/fonts/lmroman10-bold.otf) format("opentype")
+}
+@font-face{
+    font-family:"LM Roman";
+    font-weight:700;
+    font-style:italic;
+    font-display:swap;
+    src:url(/fonts/lmroman10-bolditalic.woff2) format("woff2"),url(/fonts/lmroman10-bolditalic.otf) format("opentype")
+}
+@font-face{
+    font-family:"LM Roman";
+    font-weight:400;
+    font-style:italic;
+    font-display:swap;
+    src:url(/fonts/lmroman10-italic.woff2) format("woff2"),url(/fonts/lmroman10-italic.otf) format("opentype")
+}
+@font-face{
+    font-family:"LM Roman";
+    font-weight:400;
+    font-style:normal;
+    font-display:swap;
+    src:url(/fonts/lmroman10-regular.woff2) format("woff2"),url(/fonts/lmroman10-regular.otf) format("opentype")
+}
+@font-face{
+    font-family:"LM Mono";
+    font-weight:400;
+    font-style:normal;
+    font-display:swap;
+    src:url(/fonts/lmmono10-regular.woff2) format("woff2"),url(/fonts/lmmono10-regular.otf) format("opentype")
+}
+@font-face{
+    font-family:"LM Mono Proportional";
+    font-weight:400;
+    font-style:normal;
+    font-display:swap;
+    src:url(/fonts/lmmonoprop10-regular.woff2) format("woff2"),url(/fonts/lmmonoprop10-regular.otf) format("opentype")
+}
+@font-face{
+    font-family:"LM Mono";
+    font-weight:400;
+    font-style:italic;
+    font-display:swap;
+    src:url(/fonts/lmmono10-italic.woff2) format("woff2"),url(/fonts/lmmono10-italic.otf) format("opentype")
+}
+@font-face{
+    font-family:"LM Mono Proportional";
+    font-weight:400;
+    font-style:italic;
+    font-display:swap;
+    src:url(/fonts/lmmonoprop10-oblique.woff2) format("woff2"),url(/fonts/lmmonoprop10-oblique.otf) format("opentype")
+}
+code,kbd{
+    font-family:"LM Mono Proportional",monospace
+}
+pre,pre code{
+    font-family:"LM Mono",monospace
+}
+blockquote,pre{
+    background:#eee;
+    padding:.5em
+}
+pre{
+    overflow:auto
+}
+.green,a[href$="random.c"],a[href^="https://git.kernel.org/crng/random/c/"]{
+    color:green;
+    font-family:"LM Mono Proportional",monospace
+}
+a{
+    color:#00008b;
+    text-decoration:underline
+}
+a:hover{
+    text-decoration:none
+}
+p{
+    text-align:justify;
+    hyphens:auto
+}
+img{
+    max-height:18em;
+    max-width:100%;
+    display:block;
+    margin-left:auto;
+    margin-right:auto
+}
+video{
+    max-height:25em;
+    max-width:100%;
+    display:block;
+    margin-left:auto;
+    margin-right:auto
+}
+main{
+    max-width:40em;
+    margin:0 auto
+}
+body{
+    font-family:"LM Roman",Georgia,serif;
+    line-height:1.5
+}
+h1,h2,h3,h4,h5,h6,h7{
+    margin:1em 0 .5em 0;
+    line-height:1.2
+}
+h1{
+    font-size:1.6em
+}
+h2{
+    font-size:1.2em
+}
+@media screen{
+    main{
+        margin:0 .5em
+    }
+    body{
+        color:#333
+    }
+}
+@media screen and (min-width:40em){
+    main{
+        background:#fff;
+        padding:5em 6em;
+        margin:1em auto;
+        box-shadow:.1em .1em .4em .1em #222
+    }
+    body{
+        background:#525659
+    }
+}

@@ -8,37 +8,37 @@
   {% assign cur = item.id | replace: '/', '-' %}
 
   {% if level == 0 %}
-  <style>#nested-li-last:after { content: "└"; padding-left:8px; opacity: 0.3; font-weight: lighter; }</style>
-  <style>#nested-li:after { content: "|"; padding-left:8px; opacity: 0.3; font-weight: lighter; }</style>
-  <li>
+    <style>#nested-li-last:after { content: "└"; padding-left:8px; opacity: 0.3; font-weight: lighter; }</style>
+    <style>#nested-li:after { content: "|"; padding-left:8px; opacity: 0.3; font-weight: lighter; }</style>
+    <li>
   {% else %}
-  {% if forloop.last %}
-  <li id="nested-li-last">
-  {% else %}
-  <li id="nested-li">
-  {% endif %}
+    {% if forloop.last %}
+      <li id="nested-li-last">
+    {% else %}
+      <li id="nested-li">
+    {% endif %}
   {% endif %}
     {% if item.childs %}
-    <label class="checkbox-container">
-      <input type="checkbox" />
-      <b>[<span class="n-indicator">+</span>]</b>
-      - <a href="{{item.url}}">{{item.title}}</a>
-      {% if item.childs %}
-        <ul style="margin-top:0px;margin-bottom: 0px;">
-          {% assign tree = "" | split: ',' %}
-          {% for child in item.childs %}
-            {% for p in site.subtopics %}
-              {% if p.id == child %}
-                {% assign index =  forloop.index | minus:1 %}
-              {% endif %}
+      <label class="checkbox-container">
+        <input type="checkbox" id="{{cur}}" />
+        <b>[<span class="n-indicator">+</span>]</b> - <a href="{{item.url}}">{{item.title}}</a>
+        {% if item.childs %}
+          <ul style="margin-top:0px;margin-bottom: 0px;">
+            {% assign tree = "" | split: ',' %}
+            {% for child in item.childs %}
+              {% for p in site.subtopics %}
+                {% if p.id == child %}
+                  {% assign index =  forloop.index | minus:1 %}
+                {% endif %}
+              {% endfor %}
+              {% assign tree = tree | push: site.subtopics[index] %}
             {% endfor %}
-            {% assign tree = tree | push: site.subtopics[index] %}
-          {% endfor %}
-          {% include tree %}
-        </ul>
-      {% endif %}
-    </label>
-    {% else %}[<b>-</b>] - <a href="{{item.url}}">{{item.title}}</a>
+            {% include tree %}
+          </ul>
+        {% endif %}
+      </label>
+    {% else %}
+      [<b>-</b>] - <a href="{{item.url}}">{{item.title}}</a>
     {% endif %}
   </li>
 {% endfor %}

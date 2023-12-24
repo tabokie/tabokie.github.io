@@ -49,10 +49,10 @@ input[type=checkbox]:checked ~ ul {
 
 .checkbox-container input ~ b {
   color: var(--highlight-color);
-  transition: var(--hover-transition);
   -webkit-transition: var(--hover-transition);
   -moz-transition: var(--hover-transition);
   -o-transition: var(--hover-transition);
+  transition: var(--hover-transition);
   border-bottom: 1px solid var(--highlight-color);
 }
 

@@ -1,11 +1,14 @@
 ---
 layout: blog
-title: Meditations under a Waterfall
+title: Readings
 ---
-<span class="hidden-text"># Created: 2020-02-07; Modified: 2021-10-05</span>
+<span class="hidden-text"># Created: 2020-02-07; Modified: 2023-12-24</span>
 
-It has become difficult for me (and my browser) to keep up with all the information coming from various feeds. My naive solution is to capture some of those information in written words (summary and after thoughts). I hope those post-processed words can decay slower than sitting around as bookmarks. For that to happen, I set one groud rule: Put more efforts into "capture" than "read", Feynman can probably back me up on this. Keywords or well-thought titles is not mandotory, for I have no intention to build a reverse index over this page.
-<p align="right">-- 2021/10/05</p>
+<!-- It has become difficult for me (and my browser) to keep up with all the information coming from various feeds. My naive solution is to capture some of those information in written words (summary and after thoughts). I hope those post-processed words can decay slower than sitting around as bookmarks. For that to happen, I set one groud rule: Put more efforts into "capture" than "read", Feynman can probably back me up on this. Keywords or well-thought titles is not mandotory, for I have no intention to build a reverse index over this page.
+<p align="right">-- 2021/10/05</p> -->
+
+I don't know how to put it into words yet, but there must be some kind of difference between the objects we lovingly place beside our bed, inside our dream, and the ones we put in a workroom. Still, love them or not, one need his tools to create a vision. And this is my internet corner for tools.
+<p align="right">-- 2023/12/24</p>
 
 
 ## 21-10-08

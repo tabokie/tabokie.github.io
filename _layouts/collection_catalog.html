@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ site.lang | default: "en-US" }}">
+<html lang="en">
   <head>
     <link rel="stylesheet" href="/assets/css/hack.css">
     <link rel="stylesheet" href="/assets/css/checkbox-container.css">
@@ -35,7 +35,6 @@
       }
     </style>
     {% seo %}
-    <meta name="google-site-verification" content="LwllE8LNzqSKfduvBO0DPUFHyeOhhYuk7QeKjmQHwKE" />
   </head>
   <body class="snow hack">
     <script data-goatcounter="https://tabokie.goatcounter.com/count"
@@ -44,28 +43,20 @@
       {% include navbar.html %}
 
       <div class="snowframe">
-        <div class="grid">
-          <div class="cell -3of12 content">
-            <center>
-            {% if page.avatar %}
-            <img src="{{page.avatar}}" alt="My Avatar" class="avatar">
-            {% endif %}
-            <br />
-            Reach me at <a href="mailto:xy.tao@outlook.com">xy.tao@outlook.com</a>,
-            <br />
-            also available on
-            <br />
-            <a href="https://github.com/tabokie">GitHub</a>, <a href="https://www.douban.com/people/91872582/">Douban</a>.
-            </center>
-          </div>
-          <div class="cell -9of12 content">
-            {{content}}
-          </div>
-        </div>
+        <h1>{{page.title}}</h1>
+        {{content}}
+
+        <ul>
+          {% assign Entries = site.lists | sort: 'name' %}
+          {% for entry in Entries %}
+            <li><a href="{{entry.url}}">{{entry.title}}</a></li>
+          {% endfor %}
+        </ul>
       </div>
 
       {% include footer.html %}
     </div>
+
     <script src="/assets/js/instantpage-3.0.0.js" defer type="module"> </script>
   </body>
 </html>
