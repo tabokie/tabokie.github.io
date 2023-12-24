@@ -7,7 +7,7 @@ title: Today I Learned
 {% assign uid = 0 %}
 - Linux
 
-{% include folder title='How to write script that can be safely edited on the run?' %}
+{% include folder_open title='How to write script that can be safely edited on the run?' %}
 
 Method 1:
 
@@ -25,9 +25,8 @@ Method 2:
 
 ([StackOverflow](https://stackoverflow.com/questions/3398258/edit-shell-script-while-its-running))
 
-</div></div>
-
-{% include folder title='Create highlight group in vim' %}
+{% include folder_close %}
+{% include folder_open title='Create highlight group in vim' %}
 
 ```
 # echo rule.vim
@@ -38,9 +37,8 @@ call matchadd("Group", "foo")
 ```
 ([StackExchange](https://vi.stackexchange.com/questions/5613/search-and-highlight-two-different-strings-in-different-colors))
 
-</div></div>
-
-{% include folder title='Reclaim disk space (on a shared server)' %}
+{% include folder_close %}
+{% include folder_open title='Reclaim disk space (on a shared server)' %}
 
 1. delete some files
 
@@ -48,54 +46,51 @@ call matchadd("Group", "foo")
 
 3. use `tune2fs -m <root-reserved-percentage> <device>` to grab more space from root
 
-</div></div>
-
-{% include folder title='Serve a web page' %}
+{% include folder_close %}
+{% include folder_open title='Serve a web page' %}
 
 ```
 python2 -m SimpleHTTPServer <port>
 python3 -m http.server
 ```
-</div></div>
+{% include folder_close %}
 
 - C/C++
 
-{% include folder title='C supports Variable Length Array (VLA)' %}
+{% include folder_open title='C supports Variable Length Array (VLA)' %}
 
 ```c
 void initialize(size_t n, size_t m, double A[n][m]);
 ```
 
-</div></div>
-
-{% include folder title='Forward Declaration' %}
+{% include folder_close %}
+{% include folder_open title='Forward Declaration' %}
 
 Pros: hide implementations (declare `XXImpl`), circular dependence, faster compilation
 
 Cons: can't use alias, potential inheritance is elided, delete an incomplete class is UB
 
-</div></div>
-
-{% include folder title='Evaluation Interleaving' %}
+{% include folder_close %}
+{% include folder_open title='Evaluation Interleaving' %}
 
 `f(std::shared_ptr(new A()), g())` is risky if `g()` can be interleaved between object allocation and `shared_ptr` initialization.
 
 This is explicitly prohibited after C++17 ([StackOverflow](https://stackoverflow.com/questions/38501587/what-are-the-evaluation-order-guarantees-introduced-by-c17/46472497#46472497))
 
-</div></div>
+{% include folder_close %}
 
 - Rust
 
-{% include folder title='Tiny details' %}
+{% include folder_open title='Tiny details' %}
 
 - `_` variables are dropped immediately
 - Overflow check is disabled in release build
 
-</div></div>
+{% include folder_close %}
 
 - Regex
 
-{% include folder title='Avoid self-reference' %}
+{% include folder_open title='Avoid self-reference' %}
 
 I have a process table and I want to grep it for the phrase "banana":
 
@@ -121,4 +116,4 @@ Doc Brown spoke to me: "You're just not thinking fourth dimensionally!" Like Mar
 
 ([Hacker News](https://news.ycombinator.com/item?id=27774584))
 
-</div></div>
+{% include folder_close %}
