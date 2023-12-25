@@ -190,7 +190,7 @@ title: Ideas
 - Staring at rain drops on the bus window, spooked by leaves hitting against the window
 - Foggy world like under sea
 - 走过阳光下的光栅，阴影交接的频闪
-- 拍摄走路的视频，边走路边放
+- 拍摄走路时双腿运动的视频，放在原位边走路边回放，直到分不清视频和现实
 
 ## Not Even Good
 

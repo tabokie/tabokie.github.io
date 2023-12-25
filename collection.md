@@ -3,6 +3,6 @@ layout: collection_catalog
 title: Collection
 ---
 
-Lists, lots of them.
+Things, they line up and form a list.
 <br />
 <br />
