@@ -2,7 +2,7 @@
 layout: blog
 title: Readings
 ---
-<span class="hidden-text"># Created: 2020-02-07; Modified: 2023-12-24</span>
+<span class="hidden-text"># Created: 2020-02-07; Modified: 2023-12-27</span>
 
 <!-- It has become difficult for me (and my browser) to keep up with all the information coming from various feeds. My naive solution is to capture some of those information in written words (summary and after thoughts). I hope those post-processed words can decay slower than sitting around as bookmarks. For that to happen, I set one groud rule: Put more efforts into "capture" than "read", Feynman can probably back me up on this. Keywords or well-thought titles is not mandotory, for I have no intention to build a reverse index over this page.
 <p align="right">-- 2021/10/05</p> -->
@@ -11,9 +11,21 @@ I don't know how to put it into words yet, but there must be some kind of differ
 <p align="right">-- 2023/12/24</p>
 
 
+## 23-12-27
+
+- 清五郎, 中药注射口述, Jandan
+
+> 03非典，卫健委推广中药注射治非典，说效果如何如何好，结果我正好发烧去打了这个药物，打的过程当场反应休克，抢救了一天一夜，引发的后遗症叫“特发性震颤”，当时这个症状也没能确诊，因为没有类似案例，为了治这个症状，走上了漫长的求医路，从军区医院看到省会，从省会到北京，中间内外科神经疼痛耳鼻喉全看了，一度确诊为美尼尔氏综合症，差点休学，最终在301神内确诊的，因为正好有类似的确诊案例，而且大夫是个学科带头人博士，从事脑神经相关研究，碰巧了挂到他，要不然换个人也无法确诊，但看完结果也不好，这种药物反应是因为中药液化技术（物理）引起的，损伤不可逆，而且会越来越严重，到老了可能就会并发出更严重的问题，所有的治疗方式都是只能缓解这个过程，然后这个中药注射液只搞了三个月就停了，因为三个月的输液过程当中，全国重度休克反应6000+，我只是其中一例，然后还有死亡数十例，更搞笑的是随着科技发展，后面宣布这个中药注射液是伪命题，完全不适宜注射，然后近年更是全面取消了中药体内注射。但是对我来说，这又有什么意义，我20年受困于此，如今我四十开外，在不远的未来面临的是特发性震颤最终的结局：我会抖的连筷子都拿不住，尿尿都不需要抖小🐔，因为我会一直抖，24小时不间断的抖，至于用手机打字的功能，也早晚会丧失掉。所以你要问我中医如何，我只能说去*****
+
+## 23-12-24
+
+- 理查·伯德的地心探险故事, Zhihu
+
+> 据说安第斯山脉的地下长廊就是其中的一条通道，这个地下长廊长达一千公里，是1960年7月秘鲁考察队在利马以东600公里的安第斯山脉的地下发现的，通向智利和哥伦比亚。这个长廊被联合国教科文组织列为世界文化遗产。另一个出现在联合国教科文组织的世界文化遗产列表中的是厄瓜多尔的塔幽洞群，这个洞群是1976年正式出土的，现在只探索到5公里左右。
+
 ## 21-10-08
 
-- [RocksDB in Microsoft Bing](https://blogs.bing.com/Engineering-Blog/october-2021/RocksDB-in-Microsoft-Bing), 2021
+- [RocksDB in Microsoft Bing](https://blogs.bing.com/Engineering-Blog/october-2021/RocksDB-in-Microsoft-Bing)
 
 > SSD technologies have evolved rapidly in the past decade. It provides cheaper IOPS/dollar compared with HDD, however for workload does not require substantial amounts of random accesses, HDD is still the more economical solution considering the volume/dollar.
 
@@ -27,7 +39,7 @@ Not quite convinced here, RAID0 should also be able to merge IOs on volume basis
 
 [paper] [An earth system model shows self-sustained thawing of permafrost even if all man-made GHG emissions stop in 2020](https://www.nature.com/articles/s41598-020-75481-z), 2020
 
-[Few realistic scenarios left to limit global warming to 1.5°C](https://phys.org/news/2021-05-realistic-scenarios-left-limit-global.html), 2021
+[Few realistic scenarios left to limit global warming to 1.5°C](https://phys.org/news/2021-05-realistic-scenarios-left-limit-global.html)
 
 [The Intergovernmental Panel on Climate Change](https://www.ipcc.ch/)
 
@@ -43,13 +55,13 @@ Counter-measures:
 
 [Wiki: Solar geoengineering](https://en.m.wikipedia.org/wiki/Solar_geoengineering)
 
-[HERE’S HOW WE COULD BRIGHTEN CLOUDS TO COOL THE EARTH](https://spectrum.ieee.org/climate-change), 2021
+[HERE’S HOW WE COULD BRIGHTEN CLOUDS TO COOL THE EARTH](https://spectrum.ieee.org/climate-change)
 
 > Chaos: When the present determines the future, but the approximate present does not approximately determine the future.
 
 ## 21-10-06
 
-- [Why do drum sets have ascending toms?](https://www.lowvolumedrumming.org/descending-toms/), 2021
+- [Why do drum sets have ascending toms?](https://www.lowvolumedrumming.org/descending-toms/)
 
 When drum faces are equally tensioned, Larger Diameter = Lower Pitch.
 
@@ -57,13 +69,13 @@ Larger Depth = More Air, Higher Volume, More Resistance, Less Drum Vibration, Le
 
 Floor tom transfers vibrations to the groud, thus reducing the sustain.
 
-- [Evolution of random number generators](https://www.johndcook.com/blog/2021/04/29/reinventing-rng/), 2021
+- [Evolution of random number generators](https://www.johndcook.com/blog/2021/04/29/reinventing-rng/)
 
 [Prospecting for Hash Functions](https://nullprogram.com/blog/2018/07/31/), 2018
 
 [History of the PCG paper](https://www.pcg-random.org/posts/history-of-the-pcg-paper.html), 2017
 
-- [How management by metrics leads us astray](https://jakobgreenfeld.com/metrics), 2021
+- [How management by metrics leads us astray](https://jakobgreenfeld.com/metrics)
 
 This post slightly echos with the observability series I read months back: most metrics erases the internal complexity of large system. Good management is really about how to divide and conquer the information contained in such complexity. To some extents, modern management is not that different from governing an empire. Even the book "Soulstealers: The Chinese Sorcery Scare of 1768" is relevant here.
 
@@ -77,13 +89,13 @@ A reminder, I vividly remember reading the same argument (and similar examples) 
 
 [Wu experiment](https://en.wikipedia.org/wiki/Wu_experiment)
 
-- [How to replace estimations and guesses with a Monte Carlo simulation](https://lucasfcosta.com/2021/09/20/monte-carlo-forecasts.html), 2021
+- [How to replace estimations and guesses with a Monte Carlo simulation](https://lucasfcosta.com/2021/09/20/monte-carlo-forecasts.html)
 
 The real use of monte carlo is to calculate approximation when there isn't mathematical tool for the task, e.g. realistic rendering, calculating PI. The examples in this post clearly doesn't qualify.
 
 ## 21-10-05
 
-- [Superpack: Pushing the limits of compression in Facebook’s mobile apps](https://engineering.fb.com/2021/09/13/core-data/superpack/), 2021
+- [Superpack: Pushing the limits of compression in Facebook’s mobile apps](https://engineering.fb.com/2021/09/13/core-data/superpack/)
 
 A few techniques: separately compress instructions and immediates, instructions without immediates have a better chance of repeating themselves; use opcodes as an additional context to entropy code immediates; syntactic sugar.
 
@@ -95,7 +107,7 @@ A few techniques: separately compress instructions and immediates, instructions 
 
 [paper] [Asymmetric numeral systems](https://arxiv.org/abs/0902.0271), 2009
 
-- [Linux block devices: hints for debugging and new developments](https://www.redhat.com/en/blog/linux-block-devices-hints-debugging-and-new-developments), 2021
+- [Linux block devices: hints for debugging and new developments](https://www.redhat.com/en/blog/linux-block-devices-hints-debugging-and-new-developments)
 
 How to spawn block devices for testing, how to do integrity checks.
 
@@ -114,7 +126,7 @@ nbdkit: [Better loop mounts with NBD](https://archive.fosdem.org/2019/schedule/e
 
 ## 21-06-17
 
-- Measuring and Optimizing Tail Latency, 2017. ([youtube](https://www.youtube.com/watch?v=_Zoa3xkzgFk))
+- Measuring and Optimizing Tail Latency, ([YouTube](https://www.youtube.com/watch?v=_Zoa3xkzgFk)), 2017
 
 Noise, queueing, work.
 
