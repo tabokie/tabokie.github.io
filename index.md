@@ -9,7 +9,7 @@ hide_title_in_page: true
 <br />
 Hi and welcome, I'm Xinye Tao.
 
-I program for large-scale data systems. I love them for their physicality -- the hardware as flesh and data as blood.
+I program for large-scale data systems. I'm drawn to their physicality -- the hardware as flesh and data as blood.
 
 I love many other things. That includes music, photography and writing.
 
