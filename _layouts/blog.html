@@ -23,18 +23,43 @@
       .hack h1 {
         padding-top: 0;
       }
-      footer.footer {
-        border-top: 1px solid #ccc;
-        margin-top: 80px;
-        margin-top: 5rem;
-        padding: 48px 0;
-        padding: 3rem 0;
-      }
       img {
         max-width: 100%;
         padding: 1em;
       }
     </style>
+    {% if page.side_by_side %}
+    <style>
+      /*Match content-width=60rem*/
+      footer {
+        max-width: 60rem;
+      }
+      .container {
+        min-width: 100rem;
+      }
+      /*When screen is large enough, make sure left boundary is the same as normal post.*/
+      /*Match content-width=60rem*/
+      @media (min-width: 62rem) {
+        .container {
+          margin-left: calc(50% - 30rem);
+          max-width: 75rem;
+        }
+      }
+      /*When screen is small, make sure left side is still fully visible.*/
+      @media (max-width: 40rem) {
+        .container {
+          max-width: calc(200vw + 7rem);
+          min-width: calc(200vw + 7rem);
+        }
+      }
+      @media (max-width: 52rem) {
+        footer {
+          max-width: calc(100vw - 1rem);
+        }
+      }
+    </style>
+    {% endif %}
+
     {% seo %}
   </head>
   <body class="snow hack">
@@ -48,12 +73,24 @@
       <h1>{{page.title}}</h1>
       {% endunless %}
 
-      {% if page.category %}
-      {% assign date = page.date | split: ' ' %}
-      {% assign prefix = date[0] %}
-      <p class="hidden-text"># {{page.category}}, {{ prefix }}</p>
+      {% if page.side_by_side %}
+        {% if page.category %}
+          {% assign date = page.date | split: ' ' %}
+          {% assign subtitle = '<p class="hidden-text"># ' | append: page.category | append: ', ' | append: date[0] | append: '</p>' %}
+          {{ content | side_by_side_with_subtitle: subtitle }}
+        {% else %}
+          {{ content | side_by_side_with_subtitle: '' }}
+        {% endif %}
+      {% else %}
+        {% if page.category %}
+          {% assign date = page.date | split: ' ' %}
+          {% assign prefix = date[0] %}
+          <p class="hidden-text"># {{page.category}}, {{ prefix }}</p>
+        {% endif %}
+
+        {{ content }}
       {% endif %}
-      {{content}}
+
       {% if page.childs and page.childs.size > 0 %}
         <hr></hr>
         <ul>

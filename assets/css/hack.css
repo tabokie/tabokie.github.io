@@ -212,7 +212,7 @@ a {
 }
 
 /* Table Color */
-.hack table {
+/*.hack table {
   color:#fdf4c1;
 }
 .hack table td,.hack table th {
@@ -220,7 +220,7 @@ a {
 }
 .hack table tbody td:first-child {
   color:#b0bec5;
-}
+}*/
 
 * {
   box-sizing: border-box;
@@ -615,7 +615,7 @@ p {
   -ms-transform: translateX(50%);
   transform: translateX(50%);
 }
-table {
+/*table {
   width: 100%;
   border-collapse: collapse;
   margin: 1.75rem 0;
@@ -634,7 +634,7 @@ table thead th {
 table tbody td:first-child {
   font-weight: 700;
   color: #333;
-}
+}*/
 .form {
   width: 30rem;
 }
@@ -1053,4 +1053,20 @@ img {
 
 .hidden-text {
   color: var(--camouflage-color);
+}
+
+.side-by-side tbody tr td {
+  padding: 0px 70px 0px 0px;
+  vertical-align: top;
+  border: none;
+  table-layout: fixed;
+  width: 50%;
+}
+table.side-by-side {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+.side-by-side tbody tr td p, .side-by-side tbody tr td blockquote {
+  margin-top: 0;
 }
