@@ -3,7 +3,7 @@ layout: blog
 title: '[译] 化身为狼的男人们 | Men Becoming Wolves'
 category: non-fiction
 hide_title_in_page: true
-side_by_side: true
+side_by_side: translation
 ---
 
 # 化身为狼的男人们

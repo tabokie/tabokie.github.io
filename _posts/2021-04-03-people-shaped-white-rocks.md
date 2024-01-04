@@ -3,7 +3,7 @@ layout: blog
 title: '[译] 人形白石头 | People-Shaped White Rocks'
 category: non-fiction
 hide_title_in_page: true
-side_by_side: true
+side_by_side: translation
 ---
 
 # 人形白石头
