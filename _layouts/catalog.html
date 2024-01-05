@@ -78,7 +78,7 @@
           </ul>
           <ul id="showOnChecked" style="display: none;">
             {% assign categoryGrouped = site.posts | group_by: 'category' %}
-            {% assign categorySorted = categoryGrouped | sort: 'name' %}
+            {% assign categorySorted = categoryGrouped | sort: 'title' %}
             {% for category in categorySorted %}
               {% unless forloop.first %}
               <br />

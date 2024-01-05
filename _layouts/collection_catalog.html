@@ -47,7 +47,7 @@
         {{content}}
 
         <ul>
-          {% assign Entries = site.lists | sort: 'name' %}
+          {% assign Entries = site.lists | sort: 'title' %}
           {% for entry in Entries %}
             <li><a href="{{entry.url}}">{{entry.title}}</a></li>
           {% endfor %}
