@@ -20,7 +20,7 @@ module Jekyll
         @comments = ''
         @opened = false
         @elements.select { |e| !e.strip.empty? }.each do |e|
-          if e.include? 'NOTE'
+          if e.slice! '[NOTE] '
             @comments << e
           else
             if @opened

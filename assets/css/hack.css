@@ -1059,13 +1059,6 @@ img {
   vertical-align: top;
   border: none;
   table-layout: fixed;
-  width: 50%;
-}
-.side-by-side tbody tr td:first-child {
-  padding: 0px 40px 0px 0px;
-}
-.side-by-side tbody tr td:nth-child(2) {
-  padding: 0px 0px 0px 40px;
 }
 table.side-by-side {
   width: 100%;
