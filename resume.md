@@ -16,7 +16,7 @@ hide_title_in_page: true
 
 ## Experience
 
-**Metabit Trading - Data Platform** (Software Engineer; Oct, 2023 till now)
+**Metabit Trading - Data Platform** (Software Engineer; Oct, 2023 \~ now)
 
 **PingCAP - Storage** (Database Developer; Aug, 2018 ~ Oct, 2023)
 

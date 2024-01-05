@@ -76,20 +76,25 @@ title: Ideas
 
 - dance club + shaky floor
 - hidden USB port on a random old brick wall
-- black-and-white glasses [related: upside-down glasses]
+- black-and-white glasses 
+  - upside-down glasses
   - [Infrared light to visible color](https://www.cam.ac.uk/research/news/colour-changing-magnifying-glass-gives-clear-view-of-infrared-light)
-- handgun => detector of {network latency, ambient sound} [happening: [WiFiman Signal Tracking](https://blog.ui.com/2021/08/19/wifiman-introduces-enhanced-signal-tracking-features/)]
+- handgun => detector of {network latency, ambient sound}
+  - (happening) [WiFiman Signal Tracking](https://blog.ui.com/2021/08/19/wifiman-introduces-enhanced-signal-tracking-features/)
 - cell phone => laptop trackpad
 - pair working (company must have an even number of employees)
-- independent polling agency [happening: online questionaire]
-- realtime sound beautifying [related: video beautifying]
+- independent polling agency
+  - (happening) online questionaire
+- realtime sound beautifying
+  - video beautifying
 - disk profile like film LUT
-- glove + piano [related: virtual drum [aerodrums](https://aerodrums.com/home/)]
-- subtitle search for efficient video mashup [happening: [playphrase](https://www.playphrase.me/#/search?q=know+what+i'm+talking+about)]
+- glove + piano
+  - virtual drum [aerodrums](https://aerodrums.com/home/)
+- subtitle search for efficient video mashup
+  - (happening) [playphrase](https://www.playphrase.me/#/search?q=know+what+i'm+talking+about)
 - a surprise episode after the fake finale
 - mobile phone as model viewer, AR doesn't necessarily equal vision, gravity is reality too
 - use eye tracking to interrogate suspect
-- 微波刑讯逼供
 - Physical unique hash generator for generating password from a simple seed
 - A customized TV service
   - What's good about old-school TV?
@@ -100,13 +105,13 @@ title: Ideas
 - a protocol for building communication protocol from the ground up (2023-07-16)
   - like UNIX pipe but without limiting to string
   - solve compatibility hassle, or make it a meta one.
-  - Ref: https://filipnikolovski.com/posts/what-is-the-future-of-databases/
+  - Ref: [What is the future of databases?](https://filipnikolovski.com/posts/what-is-the-future-of-databases/)
 - 不锈钢的指甲贴片 (2023-07-13)
 - Text Watermark
   - Re-arrange the content to encode an identification code
   - Each person is randomly assigned to a code (because the capacity is not enough to generate unique code for each person)
   - Over-time, we can identify the person by looking at all the leaked patterns
-  - [happening: A Watermark for Large Language Models]
+  - (happening) "A Watermark for Large Language Models"
 - A game where teammates are strangers to each other, but they have to transmit message in broad day light
 - 隐喻词典
 - 微缩建筑模型，微缩小人进入，摄像头VR探索
@@ -171,7 +176,7 @@ title: Ideas
 - We can evaluate the level of knowledge retainment of a system by how well it can decompress/restore lossy information.
   - Super-resolution imaging uses ML visual knowledge
   - Pixel art uses human visual knowledge
-  - [Bionic Reading](https://bionic-reading.com/) (a speed reading technique that only highlight word prefixes) takes advantage of language grammar and common combination of words
+  - [Bionic Reading](https://bionic-reading.com/) (a speed reading technique that only highlights word prefixes) takes advantage of language grammar and common combination of words
   - [LineByLine](https://www.linebyline.app/) (a memorization technique that strips part of word suffix), human memory is used to "decompress" the partial text
 - 对着镜子流口水，重力逆转了
 - git stash poop
@@ -183,8 +188,8 @@ title: Ideas
 
 ## Sensation
 
-- 电梯，地铁，站出一种渴望
-- 脚本里黑黢黢地pwd
+- 电梯，地铁，渴望的站姿
+- 脚本里黑黢黢地 pwd
 - A human face appears, turns, a horse face!
 - Game idea: grab a chair and walk a long way to the mountain and enjoy the sight.
 - Staring at rain drops on the bus window, spooked by leaves hitting against the window
