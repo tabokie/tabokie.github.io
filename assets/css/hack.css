@@ -1065,6 +1065,6 @@ table.side-by-side {
   border-collapse: collapse;
   border-spacing: 0;
 }
-.side-by-side tbody tr td p, .side-by-side tbody tr td blockquote {
+.side-by-side tbody tr td p, .side-by-side tbody tr td blockquote, .side-by-side tbody tr td ul {
   margin-top: 0;
 }

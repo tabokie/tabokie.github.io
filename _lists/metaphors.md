@@ -11,11 +11,11 @@ title: Metaphors
 
 - I don't do secrets. Secrets are like a callus on your heart. Tell enough of them, and before long, your heart won't feel a thing. (Yellowstone, S03E08, John Dutton)
 
-- Brain is the combination of a pond and a viewer of that pond. Some claim there're fishes deep in the water. They keep their ponds still and wait in silence.
+- Brain is the combination of a pond and a viewer of the pond. Some claim there're fishes deep in the water. They keep their ponds still and wait in silence.
 
 - 过去的关系，不像破碎的镜子，像下午古董店门口叮叮当当的水晶风铃，在特定角度折射出漂亮的光线。
 
-- Design is a sport. Like any athlete, the designer must find a path with the lowest resistance. This is also how wind passes through buildings, knife cuts between muscles, and light concentrates.
+- Design is a sport. Like any athlete, the designer must find a path with the lowest resistance. This is also how wind passes through buildings, knife cuts between muscles, and light concentrates. (2023-12-21)
 
 - Sometimes you only get a brief window into a child's attention. Like being on a cellphone you're sure is going to cut out any second. You say it fast and cross your fingers. Can you hear me? (junkpile, “Around nine PM my heart was breaking so I went to bed early to listen to it happen.”, Everything2, 2001)
 
