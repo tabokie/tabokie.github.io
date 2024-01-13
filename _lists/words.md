@@ -2,7 +2,8 @@
 layout: blog
 title: Good Combination of Words
 ---
-<span class="hidden-text"># Created: 2023-12-24; Modified: 2024-01-05</span>
+
+<span class="hidden-text"># Created: 2023-12-24; Modified: 2024-01-08</span>
 
 ## English
 
@@ -14,6 +15,8 @@ title: Good Combination of Words
 - Touch me not
 - the inquisitive eyes
 - Ten years of business as usual
+- "They seem complex to the intellectual mind." (Kenwood Dennard)
+- "assign a speedy end to humankind" (Last and First Men)
 
 ## Chinese
 
