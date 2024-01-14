@@ -12,7 +12,7 @@ hide_title_in_page: true
 - Development Skills: experienced in parallel programming with C++/Rust/Java, GPU programming with OpenGL and CUDA, well familiar with database and distributed system.
 - Language: Chinese (native), English (fluent, CET-6 629).
 - Experienced with working remotely and collaborating with remote teams.
-- Familiar with public cloud platforms, especially the performance characteristics of storage stack.
+- Familiar with public cloud platforms, especially the performance characteristics of the storage stack.
 
 ## Experience
 
@@ -26,7 +26,7 @@ timespan.
 scheduling framework that reduces tail latency by 30% during data analyze and scaling.
   - Conducted the early adaptation of TiKV for public clouds.
   - Developed a new log storage engine [Raft Engine](https://github.com/tikv/raft-engine) as a replacement for RocksDB. It reduces I/O bandwidth usage by 30% and tail latency by 20%. On AWS cloud, it improves TiDB transaction throughput by 25%. It has a unit test coverage of 98%. It is also being used by some other commercial databases.
-  - Maintaining and optimizing PingCAP’s own [fork](https://github.com/tikv/rocksdb) of RocksDB. Found and fixed multiple performance issues of upstream RocksDB. Implemented major features that enable TiKV to run thousands of RocksDB instances simultaneously.
+  - Maintaining and optimizing PingCAP’s own [fork](https://github.com/tikv/rocksdb) of RocksDB. Found and fixed multiple performance issues of upstream RocksDB. Implemented major features that enable TiKV to run thousands of RocksDB instances simultaneously on one server.
   - Lead the tech sharing program in the team. Hosted sharing sessions at CNCF Maintainer Track and USTC Event. Lead the research collaboration program with USTC.
   - Optimized CI infrastructure to cut down 80% resource usage and 40% build time.
   - Received Ownership Award in 2022 (top 10/250). Received FY23 annual high performance recognition (top 2/250).
@@ -39,7 +39,7 @@ scheduling framework that reduces tail latency by 30% during data analyze and sc
 
 **Ant Financial – OceanBase System Group** (Developer Intern; Jun, 2019 ~ Aug, 2019)
   - Exploring the performance limits of Oracle and PostgreSQL under TPC-C benchmarks.
-  - Optimized the coroutine component in [OceanBase](https://www.oceanbase.com/) internal library.
+  - Optimized the coroutine component in [OceanBase](https://www.oceanbase.com/)'s internal library.
 
 **PingCAP – TiKV Engine Team** (Developer Intern; Apr, 2019 ~ Nov, 2019)
   - Worked on making [Titan](https://github.com/tikv/titan), a RocksDB plugin for key-value separation, generally available.

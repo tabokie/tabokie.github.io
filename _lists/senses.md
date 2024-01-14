@@ -1,6 +1,6 @@
 ---
 layout: blog
-title: Sensations
+title: 感觉
 ---
 <span class="hidden-text"># Created: 2024-01-12; Modified: 2024-01-12</span>
 
