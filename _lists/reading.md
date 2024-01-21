@@ -11,6 +11,48 @@ I don't know how to put it into words yet, but there must be some kind of differ
 <p align="right">-- 2023/12/24</p>
 
 
+## 24-01-21
+
+- [They Write the Right Stuff](https://www.fastcompany.com/28121/they-write-right-stuff) (FastCompany, 1996)
+
+> This software is bug-free. It is perfect, as perfect as human beings have achieved. Consider these stats : the last three versions of the program — each 420,000 lines long-had just one error each. The last 11 versions of this software had a total of 17 errors. Commercial programs of equivalent complexity would have 5,000 errors.
+>
+> John Munson, a software engineer and professor of computer science at the University of Idaho, is not quite so generous. “Cave art,” he says. “It’s primitive. We supposedly teach computer science. There’s no science here at all.”
+>
+> The two outfits report to separate bosses and function under opposing marching orders. The development group is supposed to deliver completely error-free code, so perfect that the testers find no flaws at all. The testing group is supposed to pummel away at the code with flight scenarios and simulations that reveal as many flaws as possible. The result is what Tom Peterson calls “a friendly adversarial relationship.”
+>
+> Here is recorded every single error ever made while writing or working on the software, going back almost 20 years. For every one of those errors, the database records when the error was discovered; what set of commands revealed the error; who discovered it; what activity was going on when it was discovered — testing, training, or flight. It tracks how the error was introduced into the program; how the error managed to slip past the filters set up at every stage to catch errors — why wasn’t it caught during design? during development inspections? during verification? Finally, the database records how the error was corrected, and whether similar errors might have slipped through the same holes.
+>
+> Don’t just fix the mistakes — fix whatever permitted the mistake in the first place.
+>
+> The process is so pervasive, it gets the blame for any error — if there is a flaw in the software, there must be something wrong with the way its being written, something that can be corrected. Any error not found at the planning stage has slipped through at least some checks. Why? Is there something wrong with the inspection process? Does a question need to be added to a checklist?
+
+- [Ask HN: How did NASA make reliable software if they didn't invent unit tests?](https://news.ycombinator.com/item?id=12121739) (2016)
+
+> Unit testing is not a method of achieving reliability, but of accelerating development. They do not prove that a system functions correctly, which is more in the domain of systems and integration testing. (abtinf)
+
+- [John Hughes - Don't Write Tests [video]](https://www.youtube.com/watch?v=hXnS_Xjwk2Y) (2017) / [John Hughes: Race Conditions, Distribution, Interactions—Testing the Hard Stuff and Staying Sane [video]](https://vimeo.com/68383317) / [John Hughes - How to specify it! A guide to writing properties of pure functions [video]](https://www.youtube.com/watch?v=zvRAyq5wj38) (2019)
+
+Common properties: state invariants (remember to test generated input is valid, or filter invalid input), postcondition, metamorphic properties (multiple inputs with a relationship), inductive properties (sometimes implies completeness), model-based properties (convert to another abstract data structure, "Proof of Correctness of Data Representations")
+
+- [All Your Tests are Terrible... [video]](https://www.youtube.com/watch?v=u5senBJUkPc) (T. Winters & H. Wright, CppCon 2015)
+
+Readability: lean, on point, no boilerplate, everything is pertinent; correct by inspection.
+
+Demonstrability: exemplifying the uses of public APIs and invariants.
+
+Resilience: do not depend on implicit implementation details.
+
+- [Back to Basics: Test-driven Development [video]](https://www.youtube.com/watch?v=RoYljVOj2H8) (Fedor Pikus, CppCon 2019)
+
+The re-creation of input states is an important concern when choosing test type. Unit test is easy to test boundary values. For integration test, only the intersection of input space of all involved modules can be tested. On the other hand, using integration test to create a particular interesting state is often more readable and reviewable.
+
+- On deterministic randomized testing
+
+[Testing Distributed Systems w/ Deterministic Simulation [video]](https://www.youtube.com/watch?v=4fFDFbi3toc) (Will Wilson, 2014)
+
+[Autonomous Testing and the Future of Software Development [video]](https://www.youtube.com/watch?v=fFSPwJFXVlw) (Will Wilson, 2018)
+
 ## 23-12-27
 
 - 清五郎, 中药注射口述, Jandan
@@ -122,7 +164,6 @@ nbdkit: [Better loop mounts with NBD](https://archive.fosdem.org/2019/schedule/e
 > You usually can’t just look at a dashboard or service map and see which node or service or component is slow because it loops back into itself — when anything gets slow, EVERYTHING gets slow.
 
 > You can ask any of these questions with metrics or monitoring tools …. if you define them in advance.
-
 
 ## 21-06-17
 

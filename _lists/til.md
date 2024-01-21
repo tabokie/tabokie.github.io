@@ -117,3 +117,13 @@ Doc Brown spoke to me: "You're just not thinking fourth dimensionally!" Like Mar
 ([Hacker News](https://news.ycombinator.com/item?id=27774584))
 
 {% include folder_close %}
+
+- Word
+
+{% include folder_open title='Using fields' %}
+
+Fields are procedural texts that are automatically generated based on the context. Take `PAGE` as an example, it is a field representing current page number. You can insert it via `Insert > Parts > Field > Page`, or manually type in the script `{ PAGE }` (the braces are inserted using `Ctrl+F9`, need to right click `Update Field` to generate text). A more completed script would be like `{ IF { = MOD( {PAGE}, 2 ) } = 0 "{ PAGE } (even)" "{ PAGE } (odd)" }`.
+
+([How to control the page numbering in a Word document](https://wordmvp.com/FAQs/Numbering/PageNumbering.htm), [List of field codes in Word](https://support.microsoft.com/en-gb/office/list-of-field-codes-in-word-1ad6d91a-55a7-4a8d-b535-cf7888659a51))
+
+{% include folder_close %}

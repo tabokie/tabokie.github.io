@@ -21,7 +21,7 @@ title: Dualities of Man
 
 (Alexander Galloway, [How to Spot an Analog Philosopher](http://cultureandcommunication.org/galloway/how-to-spot-an-analog-philosopher), 2019)
 
-## Plan & Discover
+## Plan & Improvise
 
 > I think there are two types of writers, the architects and the gardeners.
 >
@@ -29,7 +29,7 @@ title: Dualities of Man
 >
 > The gardeners dig a hole, drop in a seed and water it. They kind of know what seed it is, they know if planted a fantasy seed or mystery seed or whatever. But as the plant comes up and they water it, they don't know how many branches it's going to have, they find out as it grows."
 
-(George RR Martin)
+(George R.R. Martin)
 
 ## Romantic & Pragmatic
 
