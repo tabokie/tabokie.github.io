@@ -24,7 +24,7 @@ And it does explain why many things change so little through the course of our l
 
 (5) Bourdieu's social reproduction theory investigates the process of social hierarchies being transmitted from generation to generation. One of the key components is education, which is exactly the "describe-and-prescribe" part of a society.
 
-(*) There are behaviors being part of more complex systems that can't be explained this way. But the point remains that it shouldn't be considered the natural or default state for things to be stationary, motionless. There are always some sort of hidden forces behind the scene.
+(\*) There are behaviors being part of more complex systems that can't be explained this way. But the point remains that it shouldn't be considered the natural or default state for things to be stationary, motionless. There are always some sort of hidden forces behind the scene.
 
 Structural stability is not inherently bad. I have always loved consciously building structures into my life. They are the sources of mental security that keeps me afloat in days good or bad. What concerns me, is the proportion between effort required to grow and dismantle structures. Too easy to break and we don't have much stability. Too easy to build and we quickly sink into a mess of self-imprisonment. For many of us, the situation leans more towards the latter. Beneath hierarchies of our behavior, trivial psychological cues can seed self-ballooning ideas. And those ideas continue to influence us day after day, so fundamentally as to be inseparable from the reality they result in.
 
