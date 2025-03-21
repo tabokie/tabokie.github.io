@@ -29,3 +29,5 @@ And it does explain why many things change so little through the course of our l
 Structural stability is not inherently bad. I have always loved consciously building structures into my life. They are the sources of mental security that keeps me afloat in days good or bad. What concerns me, is the proportion between effort required to grow and dismantle structures. Too easy to break and we don't have much stability. Too easy to build and we quickly sink into a mess of self-imprisonment. For many of us, the situation leans more towards the latter. Beneath hierarchies of our behavior, trivial psychological cues can seed self-ballooning ideas. And those ideas continue to influence us day after day, so fundamentally as to be inseparable from the reality they result in.
 
 The picture of humanity, thus involves the constant labor to comprehend, navigate and resist the invisible orbits of all subjects. For me, it all echoes back to David Graeber's propelling statement: "The ultimate hidden truth of the world is that it is something we make, and could just as easily make differently."
+
+> Thank J for proofreading this.
