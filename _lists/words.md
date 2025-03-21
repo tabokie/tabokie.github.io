@@ -27,3 +27,5 @@ title: Good Combination of Words
 - 愿睡如梦 (夢みるように眠りたい / To Sleep so as to Dream)
 - 我心遗忘的节奏 (De battre mon coeur s'est arrêté / The Beat That My Heart Skipped)
 - 无因的反叛 (Rebel Without a Cause)
+- 做某事时的感觉已然消失 (The Feeling That the Time for Doing Something Has Passed) [240915]
+- It Was Like This Once, It Will Be Like This Again (Song by Insides) [240929]

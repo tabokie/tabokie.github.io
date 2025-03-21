@@ -21,6 +21,7 @@ title: Product Ideas
 - AR model viewing APP that anchors the object at a point in space (use motion and gravity sensors instead of vision), useful for sectional viewing of architecture.
 - A physical hash generator that are intrinsically unique for generating password from a simple seed like URLs.
 - Customized video service that focuses on reviving old-school TV experience. (What's good about old-school TV?)
+  - [YTCH](https://ytch.xyz/), [HN discussion](https://news.ycombinator.com/item?id=41247023)
 - A meta protocol for building communication protocol from the ground up (2023-07-16)
   - A runbook that establishes communication with aliens within finite steps.
   - Ref: [What is the future of databases?](https://filipnikolovski.com/posts/what-is-the-future-of-databases/)
@@ -41,6 +42,7 @@ title: Product Ideas
 - 用意大利面做的沙锤 (2023-02-26)
 - Game idea: grab a chair and walk a long way to the mountain and enjoy the sight.
 - Electric toothbrush as vocoder/talkbox.
+- Skull shape flower pot
 
 <!--
 
