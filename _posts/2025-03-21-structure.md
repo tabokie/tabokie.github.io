@@ -20,7 +20,7 @@ And it does explain why many things change so little through the course of our l
 
 (3) Motives play a huge part in orienting our life, and they can be fabricated quite easily. Consider the statement "I do A(ction) because of M(otive)". Many different actions can satisfy an existing motive, and many motives can rationalize an existing action. Their pairing is a choice, one that is far from voluntary. (3.1) A false action, nonetheless, channels, diverts and controls the underlying desire. Desire then loses the capability to motivate new ideas, much like how modern consumers paralyze themselves in endless purchasing. (3.2) A false motive, relentlessly optimizes action within its measurement, until the action becomes overfitted for one purpose only. Many have written about this in the context of corporate management.
 
-(4) Power conventionally stems from resource disparity. Yet in abusive relationships or primitive oligarchies, dominance often relies on fictitious advantages validated solely through submission -- e.g. racial hierarchies, divine mandates.
+(4) Power is usually estabilished through resource disparity. Yet in abusive relationships or primitive oligarchies, dominance often relies on fictitious advantages that can be validated solely through submission -- e.g. racial hierarchies, divine mandates.
 
 (5) Bourdieu's social reproduction theory investigates the process of social hierarchies being transmitted from generation to generation. One of the key components is education, which is exactly the "describe-and-prescribe" part of a society.
 
@@ -30,4 +30,4 @@ Structural stability is not inherently bad. I have always loved consciously buil
 
 The picture of humanity, thus involves the constant labor to comprehend, navigate and resist the invisible orbits of all subjects. For me, it all echoes back to David Graeber's propelling statement: "The ultimate hidden truth of the world is that it is something we make, and could just as easily make differently."
 
-> Thank J for proofreading this.
+> Thank J for advice.
