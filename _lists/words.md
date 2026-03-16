@@ -13,7 +13,7 @@ title: Good Combination of Words
 - douchebag
 - Tie me up, tie me down
 - Touch me not
-- the inquisitive eyes
+- The inquisitive eyes
 - Ten years of business as usual
 - "They seem complex to the intellectual mind." (Kenwood Dennard)
 - "assign a speedy end to humankind" (Last and First Men)
