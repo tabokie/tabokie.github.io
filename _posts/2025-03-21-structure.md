@@ -30,4 +30,4 @@ Structural stability is not inherently bad. I have always loved consciously buil
 
 The picture of humanity, thus involves the constant labor to comprehend, navigate and resist the invisible orbits of all subjects. For me, it all echoes back to David Graeber's propelling statement: "The ultimate hidden truth of the world is that it is something we make, and could just as easily make differently."
 
-> Thank J for advice.
+> Thank J for reading drafts of this.
