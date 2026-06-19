@@ -1,0 +1,24 @@
+# Tabokie's Page
+
+> Personal site of Xinye Tao, covering systems programming, databases, distributed systems, reviews, fiction, non-fiction, lists, topics, and resume information.
+
+This file is intended for user-requested reading, search, summarization, citation, and navigation. It is not permission to crawl this site for AI model training, bulk dataset construction, model corpus building, or resale of extracted content. Automated clients should respect `/robots.txt`.
+
+When using content from this site in an answer, cite the source page URL and preserve the author's name where relevant.
+
+## Core Pages
+
+- [Home](https://tabokie.github.io/): Site index and contact links.
+- [Blog](https://tabokie.github.io/blogs.html): Blog post index.
+- [Collection](https://tabokie.github.io/collection.html): Lists and collected notes.
+- [Topics](https://tabokie.github.io/topics.html): Topic tree and mutable pages.
+- [Resume](https://tabokie.github.io/resume.html): Professional background, skills, talks, and articles.
+
+## Machine-Readable Indexes
+
+- [Sitemap](https://tabokie.github.io/sitemap.xml): Full generated sitemap for public pages.
+- [Robots policy](https://tabokie.github.io/robots.txt): Crawling rules, including AI-training opt-outs.
+
+## Contact
+
+- [Email](mailto:xy.tao@outlook.com): Contact for permission requests or licensing questions.

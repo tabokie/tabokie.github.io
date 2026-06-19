@@ -1,0 +1,124 @@
+<head>
+  <link rel="stylesheet" href="/assets/css/hack.css">
+  <link rel="stylesheet" href="/assets/css/checkbox-container.css">
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <script type="text/javascript" src="/assets/js/jquery-3.1.1.min.js"></script>
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
+  <link rel="manifest" href="/assets/favicon/site.webmanifest">
+  <link rel="alternate" type="application/rss+xml" title="{{ site.title | escape }}" href="/feed.xml">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#ffffff">
+
+  <style>
+    .main {
+      padding: 20px 10px;
+    }
+    .hack h1 {
+      padding-top: 0;
+    }
+    footer.footer {
+      border-top: 1px solid #ccc;
+      margin-top: 80px;
+      margin-top: 5rem;
+      padding: 48px 0;
+      padding: 3rem 0;
+    }
+    img {
+      max-width: 100%;
+      padding: 1em;
+    }
+  </style>
+  {% if page.side_by_side == "translation" %}
+  <style>
+    header {
+      max-width: 100vw;
+    }
+    footer {
+      max-width: min(60rem, 100vw);
+    }
+    .container {
+      min-width: 100rem;
+    }
+    @media (min-width: 62rem) {
+      .container {
+        margin-left: calc(50% - 30rem);
+        max-width: 75rem;
+      }
+    }
+    @media (max-width: 680px) {
+      .container {
+        max-width: calc(200vw + 25px);
+        min-width: calc(200vw + 25px);
+      }
+    }
+    .side-by-side tbody tr td {
+      width: 50%;
+    }
+    .side-by-side tbody tr td:first-child {
+      padding: 0px 40px 0px 0px;
+    }
+    .side-by-side tbody tr td:nth-child(2) {
+      padding: 0px 0px 0px 40px;
+    }
+  </style>
+  {% elsif page.side_by_side == "comment" %}
+  <style>
+    header {
+      max-width: 100vw;
+    }
+    footer {
+      max-width: min(60rem, 100vw);
+    }
+    .container {
+      min-width: 60rem;
+    }
+    @media (min-width: 62rem) {
+      .container {
+        margin-left: calc(50% - 30rem);
+        max-width: 67rem;
+      }
+    }
+    @media (max-width: 620px) {
+      .container {
+        max-width: calc(133vw);
+        min-width: calc(133vw);
+      }
+    }
+    .side-by-side tbody tr td:first-child {
+      padding: 0px 20px 0px 0px;
+      width: 75%;
+    }
+    .side-by-side tbody tr td:nth-child(2) {
+      padding: 0px 0px 0px 0px;
+      width: 25%;
+    }
+    .side-by-side tbody tr td:nth-child(2) p {
+      font-size: 0.95rem
+    }
+  </style>
+  {% endif %}
+
+  {% seo %}
+  {% assign author_email = site.author.email | prepend: "mailto:" %}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": {{ site.author.name | jsonify }},
+    "url": {{ site.url | jsonify }},
+    "email": {{ author_email | jsonify }},
+    "sameAs": [{% for link in site.social.links %}{{ link | jsonify }}{% unless forloop.last %}, {% endunless %}{% endfor %}],
+    "knowsAbout": [
+      "systems programming",
+      "database systems",
+      "distributed systems",
+      "large-scale data systems",
+      "technical writing"
+    ]
+  }
+  </script>
+</head>

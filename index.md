@@ -1,6 +1,7 @@
 ---
 layout: blog
 title: Xinye Tao
+description: "Personal homepage of Xinye Tao, a software engineer writing about large-scale data systems, programming, music, photography, and essays."
 hide_title_in_page: true
 # avatar: /assets/favicon/android-chrome-512x512.png
 # avatar_old: /assets/img/vampire.png
@@ -39,4 +40,3 @@ You can reach me at [xy.tao@outlook.com](mailto:xy.tao@outlook.com). I'm also av
 <br />
 <br />
 <br />
-

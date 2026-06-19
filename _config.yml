@@ -1,3 +1,21 @@
+url: "https://tabokie.github.io"
+title: "Xinye Tao"
+description: "Personal site of Xinye Tao: systems programming, databases, distributed systems, essays, lists, and notes."
+lang: "en-US"
+
+author:
+  name: "Xinye Tao"
+  email: "xy.tao@outlook.com"
+
+social:
+  name: "Xinye Tao"
+  links:
+    - "https://github.com/tabokie"
+    - "https://www.douban.com/people/91872582"
+
+webmaster_verifications:
+  google: "LwllE8LNzqSKfduvBO0DPUFHyeOhhYuk7QeKjmQHwKE"
+
 collections:
   topics:
     output: true

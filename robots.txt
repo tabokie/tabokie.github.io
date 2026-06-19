@@ -1,0 +1,46 @@
+# robots.txt for https://tabokie.github.io/
+#
+# Policy: normal search indexing, previews, citation, and user-requested
+# retrieval are allowed. Crawling for AI model training, bulk dataset
+# construction, or model corpus building is not allowed.
+
+User-agent: GPTBot
+Disallow: /
+
+User-agent: Google-Extended
+Disallow: /
+
+User-agent: ClaudeBot
+Disallow: /
+
+User-agent: anthropic-ai
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
+
+User-agent: Applebot-Extended
+Disallow: /
+
+User-agent: Bytespider
+Disallow: /
+
+User-agent: Meta-ExternalAgent
+Disallow: /
+
+User-agent: cohere-ai
+Disallow: /
+
+User-agent: ImagesiftBot
+Disallow: /
+
+User-agent: omgili
+Disallow: /
+
+User-agent: omgilibot
+Disallow: /
+
+User-agent: *
+Allow: /
+
+Sitemap: https://tabokie.github.io/sitemap.xml

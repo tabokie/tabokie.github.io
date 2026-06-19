@@ -1,6 +1,7 @@
 ---
 layout: blog
 title: Résumé
+description: "Résumé of Xinye Tao, a software engineer experienced in databases, distributed systems, storage engines, cloud storage, C++, Rust, and systems programming."
 hide_title_in_page: true
 ---
 
