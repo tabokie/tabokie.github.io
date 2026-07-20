@@ -7,19 +7,15 @@ hide_title_in_page: true
 
 # Xinye Tao (`陶新野`)
 
-## Skills
-
-- Programming Language: experienced in C/C++/Rust, familiar with Python/Java/Go/Verilog HDL.
-- Development Skills: experienced in parallel programming with C++/Rust/Java, GPU programming with OpenGL and CUDA, well familiar with database and distributed system.
-- Language: Chinese (native), English (fluent, CET-6 629).
-- Experienced with working remotely and collaborating with remote teams.
-- Familiar with public cloud platforms, especially the performance characteristics of the storage stack.
-
 ## Experience
 
-**Metabit Trading - Data Platform** (Software Engineer; Oct, 2023 \~ now)
+**Metabit Trading - Data Platform** (Senior Software Engineer; Oct, 2023 ~ June, 2026)
 
-**PingCAP - Storage** (Database Developer; Aug, 2018 ~ Oct, 2023)
+  - Gatekeeping the general quality of team deliverables. Responsible for designing and iterating testing facilities, the product release system, and automations to drive and monitor all above.
+  - Overseeing details concerning software quality before the new message streaming system for trading went online. Revised and reworked the entire implementation in a tight time frame.
+  - Rewrote message steaming client from C++ to Rust. Designed and implemented multi-versioning over time-series data for multiple systems that hold them.
+
+**PingCAP - Storage** (Database Developer; July, 2020 ~ Oct, 2023)
 
   - The most active contributor to [TiKV](https://github.com/tikv/tikv) in the three-year
 timespan.
