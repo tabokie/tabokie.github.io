@@ -11,7 +11,7 @@ hide_title_in_page: true
 
 **Metabit Trading - Data Platform** (Senior Software Engineer; Oct, 2023 ~ June, 2026)
 
-  - Gatekeeping the general quality of team deliverables. Responsible for designing and iterating testing facilities, the product release system, and automations to drive and monitor all above.
+  - Gatekeeping the general quality of team deliverables. Responsible for designing and iterating testing facilities, product release process, and automations to drive and monitor all above.
   - Overseeing details concerning software quality before the new message streaming system for trading went online. Revised and reworked the entire implementation in a tight time frame.
   - Rewrote message steaming client from C++ to Rust. Designed and implemented multi-versioning over time-series data for multiple systems that hold them.
 
