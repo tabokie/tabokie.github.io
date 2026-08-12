@@ -12,7 +12,7 @@ Hi and welcome, I'm Xinye Tao.
 
 I was a programmer for six years. I programmed for large-scale data systems. I'm drawn to their physicality -- the hardware as flesh and data as blood.
 
-I believe people have intrinsic value, and the value should be expressed in our encounters and entanglements as equals. People votes for their future. Let’s chat if you share similar beliefs.
+I believe people have intrinsic value, and the value should be expressed in their encounters and entanglements as equals. People vote for their future. Let’s chat if you share similar beliefs.
 
 I love many other things. That includes music, photography and writing.
 
